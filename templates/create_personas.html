@@ -1,0 +1,118 @@
+{% extends "layout.html" %}
+
+{% block title %}Create Personas{% endblock %}
+
+{% block content %}
+
+  <!-- Hero Section -->
+  <section class="bg-blue-600 text-white text-center py-16">
+    <div class="container mx-auto px-6">
+      <h1 class="text-5xl font-extrabold">Create AI Personas</h1>
+      <p class="mt-4 text-lg">Generate unique AI personas from a brief or document</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-12 container mx-auto px-6">
+    <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <form id="personaForm" action="/create-personas" method="POST" enctype="multipart/form-data" class="space-y-4">
+        <div class="mb-6">
+          <p class="text-lg font-medium mb-4">Choose your input method:</p>
+          <div class="flex space-x-4 mb-4">
+            <button type="button" id="briefBtn" class="px-4 py-2 rounded-lg bg-blue-100 hover:bg-blue-200 focus:outline-none transition" onclick="switchInput('brief')">Write Brief</button>
+            <button type="button" id="fileBtn" class="px-4 py-2 rounded-lg bg-blue-100 hover:bg-blue-200 focus:outline-none transition" onclick="switchInput('file')">Upload Document</button>
+          </div>
+        </div>
+
+        <div id="briefInput" class="hidden">
+          <label class="block text-gray-700 font-bold mb-2" for="brief">Brief:</label>
+          <textarea id="brief" name="brief" rows="4" placeholder="Enter your brief" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+        </div>
+
+        <div id="fileInput" class="hidden">
+          <label class="block text-gray-700 font-bold mb-2" for="document">Upload Document:</label>
+          <input type="file" id="document" name="document" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <div>
+          <label class="block text-gray-700 font-bold mb-2" for="num_personas">Number of Personas:</label>
+          <input type="number" id="num_personas" name="num_personas" min="1" max="10" value="5" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+
+        <button id="submitBtn" type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed">
+          Generate Personas
+        </button>
+      </form>
+    </div>
+
+    <!-- Display Personas -->
+    {% if personas %}
+      <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {% for persona in personas %}
+          <div class="bg-white shadow-lg rounded-lg p-6">
+            <h3 class="text-2xl font-bold text-blue-600">{{ persona.name }}</h3>
+            <p class="mt-2 text-gray-700"><strong>Personality:</strong> {{ ", ".join(persona.personality) }}</p>
+            <p class="mt-2 text-gray-700"><strong>Background:</strong> {{ persona.background }}</p>
+            <p class="mt-2 text-gray-700"><strong>Interests:</strong> {{ ", ".join(persona.interests) }}</p>
+            <p class="mt-2 text-gray-700"><strong>Communication Style:</strong> {{ ", ".join(persona.communication_style) }}</p>
+            <p class="mt-2 text-gray-700"><strong>Core Values:</strong> {{ persona.core_values }}</p>
+            <p class="mt-2 text-gray-700"><strong>Knowledge Domain:</strong> {{ ", ".join(persona.knowledge_domain) }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </main>
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const form = document.getElementById('personaForm');
+  const submitBtn = document.getElementById('submitBtn');
+  const briefInput = document.getElementById('briefInput');
+  const fileInput = document.getElementById('fileInput');
+  const briefField = document.getElementById('brief');
+  const fileField = document.getElementById('document');
+
+  // Show brief input by default
+  briefInput.classList.remove('hidden');
+  briefBtn.classList.add('bg-blue-500', 'text-white');
+
+  function switchInput(type) {
+    if (type === 'brief') {
+      briefInput.classList.remove('hidden');
+      fileInput.classList.add('hidden');
+      briefBtn.classList.add('bg-blue-500', 'text-white');
+      fileBtn.classList.remove('bg-blue-500', 'text-white');
+      fileField.value = '';
+    } else {
+      fileInput.classList.remove('hidden');
+      briefInput.classList.add('hidden');
+      fileBtn.classList.add('bg-blue-500', 'text-white');
+      briefBtn.classList.remove('bg-blue-500', 'text-white');
+      briefField.value = '';
+    }
+  }
+
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Validate that either brief or file is provided
+    if (!briefField.value && !fileField.files[0]) {
+      alert('Please provide either a brief or upload a document');
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+      <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+      Creating Personas...
+    `;
+    
+    form.submit();
+  });
+</script>
+{% endblock %}

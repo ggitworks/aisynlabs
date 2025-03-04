@@ -1,0 +1,201 @@
+{% extends "layout.html" %}
+
+{% block title %}{% trans %}Processing Results{% endtrans %}{% endblock %}
+
+{% block content %}
+
+<style>
+#dialogContent, #researchSectionsContent, #researchReportContent, #finalReportContent {
+  max-height: 300px;
+  overflow-y: auto;
+  display: none;
+}
+
+#otherDataContent {
+  display: none;
+}
+</style>
+
+<div class="p-6">
+  <h1 class="text-3xl font-bold mb-6">{% trans %}Report Generation in Progress{% endtrans %}</h1>
+    
+  <!-- Larger Progress Bar -->
+  <div class="mb-6">
+    <div class="w-full h-12 bg-gray-200 rounded-full dark:bg-gray-700">
+      <div class="h-12 bg-blue-600 rounded-full dark:bg-blue-500 flex items-center justify-center text-white text-2xl" id="progressBar" style="width: 0%;">0%</div>
+    </div>
+    <p id="progressText" class="mt-2 text-gray-600"></p>
+  </div>
+
+  <div id="loading" class="bg-blue-100 border-l-4 border-blue-500 text-blue-700 p-4 mb-6">
+    {% trans %}Initializing...{% endtrans %}
+  </div>
+
+  <!-- Personas Section -->
+  <div class="mb-8">
+    <h2 class="text-2xl font-bold mb-4">{% trans %}Personas{% endtrans %}</h2>
+    <div id="personasContent" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+  </div>
+
+  <div id="otherDataContent">
+    <!-- Dialog Section -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">{% trans %}Dialog{% endtrans %}</h2>
+      <div id="dialogContent" class="bg-white rounded-lg shadow-md p-6"></div>
+    </div>
+
+    <!-- Research Sections -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">{% trans %}Research Sections{% endtrans %}</h2>
+      <div id="researchSectionsContent" class="bg-white rounded-lg shadow-md"></div>
+    </div>
+
+    <!-- Research Report -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">{% trans %}Research Report{% endtrans %}</h2>
+      <div id="researchReportContent" class="bg-white rounded-lg shadow-md p-6"></div>
+    </div>
+
+    <!-- Final Comparative Report -->
+    <div class="mb-8">
+      <h2 class="text-2xl font-bold mb-4">{% trans %}Final Comparative Report{% endtrans %}</h2>
+      <div id="finalReportContent" class="bg-white rounded-lg shadow-md p-6"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+  const uid = "{{ uid }}";
+  const evtSource = new EventSource(`/run_async/${uid}`);
+
+  // Function to update the progress bar based on the current step.
+  function updateProgress(step, section) {
+    let progress = 0;
+    let text = "";
+    switch (step) {
+      case 'upload':
+        progress = 10;
+        text = "{{ _('File uploaded') }}" + " -- " + progress + "%";
+        break;
+      case 'personas':
+        progress = 15;
+        text = "{{ _('Creating personas') }}" + " -- " + progress + "%";
+        break;
+      case 'start':
+        progress = 19;
+        text = "{{ _('Starting focus group simulation') }}" + " -- " + progress + "%";
+        break;
+      case 'moderation':
+        progress = 20;
+        text = "{{ _('Moderating discussion, may take a few minutes') }}" + " -- " + progress + "%";
+        break;
+      case 'dialog':
+        progress = 30;
+        text = "{{ _('Focus group discussion completed') }}" + " -- " + progress + "%";
+        break;
+      case 'report_generation':
+        progress = 45;
+        text = "{{ _('Generating research report') }}" + " -- " + progress + "%";
+        break;
+      case 'section_complete':
+        let section_number = section.trim().split('.')[0];
+        if (isNaN(section_number)) {
+          section_number = 0;
+        }
+        progress = 60 + (section_number * 2);
+        text = "{{ _('Research report section:') }}" + section_number + " {{ _('completed') }}" + " -- " + progress + "%";
+        break;
+      case 'final_report':
+        progress = 90;
+        text = "{{ _('Finalizing research report') }}" + " -- " + progress + "%";
+        break;
+      case 'done':
+        progress = 99;
+        text = "{{ _('Process completed') }}" + " -- " + progress + "%";
+        break;
+      case 'redirect':
+        progress = 100;
+        text = "{{ _('Redirecting') }}" + " -- " + progress + "%";
+        break;
+      default:
+        text = text;
+    }
+    document.getElementById('progressBar').style.width = progress + "%";
+    document.getElementById('progressBar').innerText = progress + "%";
+    if(progress == 99) {
+        text = "{{ _('Process completed') }}" + " -- " + progress + "%";
+    }
+    document.getElementById('loading').innerText = text;
+  }
+
+  evtSource.onmessage = function(event) {
+    const data = JSON.parse(event.data);
+    console.log(data);
+
+    updateProgress(data.step, data.section);
+    if (data.step === 'upload') {
+      document.getElementById('loading').innerText = data.message;
+    } else if (data.step === 'personas') {
+      // Render personas as cards
+      const personasDiv = document.getElementById('personasContent');
+      personasDiv.innerHTML = '';
+
+      const personas = data.data
+
+      data.data.forEach(persona => {
+        const card = document.createElement('div');
+        card.className = 'bg-white rounded-lg shadow-md overflow-hidden';
+        card.innerHTML = `
+          <div class="p-6">
+            <h3 class="text-xl font-bold text-blue-600 mb-2">${persona.name}</h3>
+            <p class="text-gray-700 mb-2"><span class="font-semibold">{{ _('Personality:') }}</span> ${persona.personality.join(', ')}</p>
+            <p class="text-gray-700 mb-2"><span class="font-semibold">{{ _('Background:') }}</span> ${persona.background}</p>
+            <p class="text-gray-700 mb-2"><span class="font-semibold">{{ _('Interests:') }}</span> ${persona.interests.join(', ')}</p>
+            <p class="text-gray-700 mb-2"><span class="font-semibold">{{ _('Communication Style:') }}</span> ${persona.communication_style.join(', ')}</p>
+            <p class="text-gray-700 mb-2"><span class="font-semibold">{{ _('Core Values:') }}</span> ${persona.core_values}</p>
+            <p class="text-gray-700"><span class="font-semibold">{{ _('Knowledge Domain:') }}</span> ${persona.knowledge_domain.join(', ')}</p>
+          </div>
+        `;
+        personasDiv.appendChild(card);
+      });
+    } else if (data.step === 'dialog') {
+      document.getElementById('dialogContent').innerHTML = data.data;
+    } else if (data.step === 'research_sections') {
+      const researchSectionsDiv = document.getElementById('researchSectionsContent');
+      researchSectionsDiv.innerHTML = '';
+      const sections = data.data;
+      for (const sectionTitle in sections) {
+        if (sections.hasOwnProperty(sectionTitle)) {
+          const sectionContent = sections[sectionTitle];
+          const card = document.createElement('div');
+          card.className = 'border-b border-gray-200 last:border-b-0';
+          card.innerHTML = `
+            <div class="bg-gray-50 px-6 py-3">
+              <h5 class="text-lg font-semibold text-gray-700">${sectionTitle}</h5>
+            </div>
+            <div class="px-6 py-4">
+              <div class="text-gray-700">${sectionContent}</div>
+            </div>
+          `;
+          researchSectionsDiv.appendChild(card);
+        }
+      }
+    } else if (data.step === 'research_report') {
+      document.getElementById('researchReportContent').innerHTML = data.data;
+    } else if (data.step === 'final_report') {
+      document.getElementById('finalReportContent').innerHTML = data.data;
+    } else if (data.step === 'redirect') {
+      evtSource.close();
+      console.log("Redirecting to: " + data.url);
+      window.location.href = data.url;
+    } else if (data.step === 'done') {
+      document.getElementById('loading').innerText = data.message;
+    }
+  };
+</script>
+
+{% endblock %}
+
+{% block scripts %}
+<!-- Your event source script here -->
+{% endblock %}

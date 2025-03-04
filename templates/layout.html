@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+  <title>{% block title %}Google TR | Synlabs{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xtendui@latest/dist/xtendui.min.css">
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+    }
+  </style>
+  {% block head %}{% endblock %}
+</head>
+<body class="bg-gray-100 text-gray-900">
+  {% include 'navigation.html' %}
+
+  <main class="py-0 container mx-auto px-0">
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-6 mt-auto">
+    <div class="container mx-auto text-center">
+      <p>&copy; 2025 Google TR | Synlabs. All rights reserved.</p>
+      <p>    <a href="{{ url_for('set_language', lang='en') }}">English</a> |
+        <a href="{{ url_for('set_language', lang='fr') }}">Français</a>
+        |
+        <a href="{{ url_for('set_language', lang='de') }}">Deutsch</a>
+        |
+        <a href="{{ url_for('set_language', lang='tr') }}">Türkçe</a>
+    </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/xtendui@latest/dist/xtendui.min.js"></script>
+  {% block scripts %}{% endblock %}
+</body>
+</html> 

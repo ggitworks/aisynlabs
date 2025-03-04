@@ -1,0 +1,294 @@
+{% extends "layout.html" %}
+
+{% block title %}{% trans %}Personas{% endtrans %}{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8 max-w-6xl">
+  <div class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold text-gray-900 mb-6">{% trans %}Step 2: Personas{% endtrans %}</h1>
+    
+    <!-- Personas Grid -->
+    <div id="personasGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+      {% for persona in personas %}
+        <div class="persona-card bg-gray-50 rounded-lg p-4 relative" data-id="{{ loop.index }}">
+          <button class="delete-persona absolute top-2 right-2 text-red-600 hover:text-red-800">×</button>
+          <div class="space-y-2">
+            <input type="text" name="name" value="{{ persona.name }}" class="w-full font-bold text-lg">
+            <div>
+              <label class="block text-sm">{% trans %}Personality:{% endtrans %}</label>
+              <input type="text" name="personality" value="{{ ', '.join(persona.personality) }}" class="w-full">
+            </div>
+            <div>
+              <label class="block text-sm">{% trans %}Background:{% endtrans %}</label>
+              <textarea name="background" class="w-full">{{ persona.background }}</textarea>
+            </div>
+            <div>
+              <label class="block text-sm">{% trans %}Income:{% endtrans %}</label>
+              <input type="text" name="income" value="{{ persona.income }}" class="w-full">
+            </div>
+            <div>
+              <label class="block text-sm">{% trans %}Age:{% endtrans %}</label>
+              <input type="number" name="age" value="{{ persona.age }}" class="w-full">
+            </div>
+            <div>
+              <label class="block text-sm">{% trans %}Education:{% endtrans %}</label>
+              <input type="text" name="education" value="{{ persona.education }}" class="w-full">
+            </div>
+            <div>
+              <label class="block text-sm">{% trans %}Gender:{% endtrans %}</label>
+              <input type="text" name="gender" value="{{ persona.gender }}" class="w-full">
+            </div>
+            <div>
+              <label class="block text-sm">{% trans %}Interests:{% endtrans %}</label>
+              <input type="text" name="interests" value="{{ ', '.join(persona.interests) }}" class="w-full">
+            </div>
+            <div>
+              <label class="block text-sm">{% trans %}Communication Style:{% endtrans %}</label>
+              <input type="text" name="communication_style" value="{{ ', '.join(persona.communication_style) }}" class="w-full">
+            </div>
+            <div>
+              <label class="block text-sm">{% trans %}Core Values:{% endtrans %}</label>
+              <input type="text" name="core_values" value="{{ persona.core_values }}" class="w-full">
+            </div>
+            <div>
+              <label class="block text-sm">{% trans %}Knowledge Domain:{% endtrans %}</label>
+              <input type="text" name="knowledge_domain" value="{{ ', '.join(persona.knowledge_domain) }}" class="w-full">
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    
+    <!-- Controls -->
+    <div class="flex justify-between items-center">
+      <div class="space-x-4">
+        <button id="addPersona" class="text-blue-600 hover:text-blue-800">
+          {% trans %}+ Add Another Persona{% endtrans %}
+        </button>
+        <button id="generateAIPersona" class="text-blue-600 hover:text-blue-800">
+          {% trans %}+ Add AI Generated Persona{% endtrans %}
+        </button>
+      </div>
+      
+      <form action="{{ url_for('run_async') }}" method="POST">
+        <input type="hidden" name="personas" id="personasData">
+        <input type="hidden" name="brief" value="{{ brief }}">
+        {% if comparison_file_path %}
+          <input type="hidden" name="comparison_file_path" value="{{ comparison_file_path }}">
+        {% endif %}
+        <button type="submit" class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+          {% trans %}Continue with{% endtrans %} <span id="personaCount">{{ personas|length }}</span> {% trans %}Personas →{% endtrans %}
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<script id="personas-object" type="application/json">
+  {{ personas|tojson|safe }}
+</script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const personasGrid = document.getElementById('personasGrid');
+    const addPersonaBtn = document.getElementById('addPersona');
+    const personaCountSpan = document.getElementById('personaCount');
+    const personasDataInput = document.getElementById('personasData');
+    
+    // Store the initial personas data
+    const personas = JSON.parse(document.getElementById('personas-object').textContent);
+
+    console.log("personas", personas);
+    
+    // Update personas count display
+    function updatePersonaCount() {
+        const count = document.querySelectorAll('.persona-card').length;
+        personaCountSpan.textContent = count;
+    }
+    
+    // Collect all personas data from the form
+    function collectPersonasData() {
+        const cards = document.querySelectorAll('.persona-card');
+        const data = Array.from(cards).map(card => ({
+            name: card.querySelector('[name="name"]').value,
+            personality: card.querySelector('[name="personality"]').value.split(',').map(s => s.trim()),
+            background: card.querySelector('[name="background"]').value,
+            income: card.querySelector('[name="income"]').value,
+            age: card.querySelector('[name="age"]').value,
+            education: card.querySelector('[name="education"]').value,
+            gender: card.querySelector('[name="gender"]').value,
+            interests: card.querySelector('[name="interests"]').value.split(',').map(s => s.trim()),
+            communication_style: card.querySelector('[name="communication_style"]').value.split(',').map(s => s.trim()),
+            core_values: card.querySelector('[name="core_values"]').value,
+            knowledge_domain: card.querySelector('[name="knowledge_domain"]').value.split(',').map(s => s.trim())
+        }));
+        return data;
+    }
+    
+    // Create a new persona card
+    function createPersonaCard(persona = null) {
+      const defaultPersona = {
+        name: {{ _('New Persona')|tojson|safe }},
+        personality: [{{ _('Friendly')|tojson|safe }}, {{ _('Professional')|tojson|safe }}],
+        background: {{ _('Enter background here...')|tojson|safe }},
+        income: "",
+        age: "",
+        education: "",
+        gender: "",
+        interests: [{{ _('Technology')|tojson|safe }}, {{ _('Research')|tojson|safe }}],
+        communication_style: [{{ _('Formal')|tojson|safe }}, {{ _('Clear')|tojson|safe }}],
+        core_values: {{ _('Enter core values...')|tojson|safe }},
+        knowledge_domain: [{{ _('General Knowledge')|tojson|safe }}]
+    };
+        
+        const data = persona || defaultPersona;
+        const card = document.createElement('div');
+        card.className = 'persona-card bg-gray-50 rounded-lg p-4 relative';
+
+        console.log("data", data);
+        
+        card.innerHTML = `
+            <button class="delete-persona absolute top-2 right-2 text-red-600 hover:text-red-800 text-xl font-bold">×</button>
+            <div class="space-y-2">
+                <input type="text" name="name" value="${data.name}" class="w-full font-bold text-lg p-2 rounded border">
+                
+                <div>
+                    <label class="block text-sm">{% trans %}Personality:{% endtrans %}</label>
+                    <input type="text" name="personality" value="${data.personality.join(', ')}" class="w-full p-2 rounded border">
+                </div>
+                
+                <div>
+                    <label class="block text-sm">{% trans %}Background:{% endtrans %}</label>
+                    <textarea name="background" class="w-full p-2 rounded border" rows="3">${data.background}</textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm">{% trans %}Income:{% endtrans %}</label>
+                    <input type="text" name="income" value="${data.income}" class="w-full p-2 rounded border">
+                </div>
+
+                <div>
+                    <label class="block text-sm">{% trans %}Age:{% endtrans %}</label>
+                    <input type="number" name="age" value="${data.age}" class="w-full p-2 rounded border">
+                </div>
+
+                <div>
+                    <label class="block text-sm">{% trans %}Education:{% endtrans %}</label>
+                    <input type="text" name="education" value="${data.education}" class="w-full p-2 rounded border">
+                </div>
+
+                <div>
+                    <label class="block text-sm">{% trans %}Gender:{% endtrans %}</label>
+                    <input type="text" name="gender" value="${data.gender}" class="w-full p-2 rounded border">
+                </div>
+                
+                <div>
+                    <label class="block text-sm">{% trans %}Interests:{% endtrans %}</label>
+                    <input type="text" name="interests" value="${data.interests.join(', ')}" class="w-full p-2 rounded border">
+                </div>
+                
+                <div>
+                    <label class="block text-sm">{% trans %}Communication Style:{% endtrans %}</label>
+                    <input type="text" name="communication_style" value="${data.communication_style.join(', ')}" class="w-full p-2 rounded border">
+                </div>
+                
+                <div>
+                    <label class="block text-sm">{% trans %}Core Values:{% endtrans %}</label>
+                    <input type="text" name="core_values" value="${data.core_values}" class="w-full p-2 rounded border">
+                </div>
+                
+                <div>
+                    <label class="block text-sm">{% trans %}Knowledge Domain:{% endtrans %}</label>
+                    <input type="text" name="knowledge_domain" value="${data.knowledge_domain.join(', ')}" class="w-full p-2 rounded border">
+                </div>
+            </div>
+        `;
+        
+        return card;
+    }
+    
+    // Add event listeners for delete buttons
+    personasGrid.addEventListener('click', function(e) {
+        if (e.target.classList.contains('delete-persona')) {
+            const card = e.target.closest('.persona-card');
+            if (document.querySelectorAll('.persona-card').length > 1) {
+                card.remove();
+                updatePersonaCount();
+            } else {
+                alert('{% trans %}You must have at least one persona!{% endtrans %}');
+            }
+        }
+    });
+    
+    // Add new persona button handler
+    addPersonaBtn.addEventListener('click', function() {
+        const newCard = createPersonaCard();
+        personasGrid.appendChild(newCard);
+        updatePersonaCount();
+    });
+    
+    // Add AI Generated Persona button handler
+    document.getElementById('generateAIPersona').addEventListener('click', async function() {
+        const button = this;
+        const originalText = button.textContent;
+        button.disabled = true;
+        button.innerHTML = `
+            <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-blue-600 inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+            </svg>
+            {% trans %}Generating Persona...{% endtrans %}
+        `;
+
+        try {
+            // Collect current personas for context
+            const currentPersonas = collectPersonasData();
+            
+            const response = await fetch('/generate-persona', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    brief: '{{ brief|tojson|safe }}',
+                    existing_personas: currentPersonas
+                }),
+            });
+
+            const newPersona = await response.json();
+            const newCard = createPersonaCard(newPersona);
+            personasGrid.appendChild(newCard);
+            updatePersonaCount();
+        } catch (error) {
+            console.error('Error:', error);
+            alert({{ _('Failed to generate new persona. Please try again.')|tojson|safe }});
+
+        } finally {
+            button.disabled = false;
+            button.textContent = originalText;
+        }
+    });
+    
+    // Handle form submission
+    document.querySelector('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const personasData = collectPersonasData();
+        if (personasData.length < 1) {
+            alert('{% trans %}You must have at least one persona!{% endtrans %}');
+            return;
+        }
+        personasDataInput.value = JSON.stringify(personasData);
+        this.submit();
+    });
+    
+    // Initialize the grid with existing personas
+    personasGrid.innerHTML = '';
+    personas.forEach(persona => {
+        personasGrid.appendChild(createPersonaCard(persona));
+    });
+    updatePersonaCount();
+
+
+
+  });
+
+</script>
+{% endblock %}

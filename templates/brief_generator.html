@@ -1,0 +1,60 @@
+{% extends "layout.html" %}
+
+{% block title %}Research Brief Generator{% endblock %}
+
+{% block content %}
+
+
+
+
+  <!-- Hero Section -->
+  <section class="bg-blue-600 text-white text-center py-16">
+    <div class="container mx-auto px-6">
+      <h1 class="text-5xl font-extrabold">Research Brief Generator</h1>
+      <p class="mt-4 text-lg">Generate detailed research briefs from a short prompt</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-12 container mx-auto px-6">
+    <div class="max-w-3xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <form id="briefForm" action="/brief-generator" method="POST" class="space-y-4">
+        <div>
+          <label class="block text-gray-700 font-bold mb-2" for="short_prompt">Enter a Short Prompt:</label>
+          <input type="text" id="short_prompt" name="short_prompt" placeholder="e.g., young shoe company in turkey" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500" required>
+        </div>
+        <button id="submitBtn" type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition disabled:opacity-50 disabled:cursor-not-allowed">
+          Generate Research Brief
+        </button>
+      </form>
+    </div>
+
+    <!-- Display Generated Brief -->
+    {% if generated_brief %}
+      <div class="mt-12 bg-white shadow-md rounded-lg p-6">
+        <h2 class="text-3xl font-bold text-blue-600 mb-4">Generated Research Brief</h2>
+        <pre class="whitespace-pre-wrap text-gray-700 text-lg">{{ generated_brief }}</pre>
+      </div>
+    {% endif %}
+  </main>
+
+
+{% endblock %}
+
+{% block scripts %}
+<script>
+  const form = document.getElementById('briefForm');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', function(e) {
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = `
+      <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+        <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+      </svg>
+      Generating Brief...
+    `;
+  });
+</script>
+{% endblock %}

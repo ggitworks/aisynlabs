@@ -1,0 +1,3158 @@
+{
+  "uid": "cba75647-942d-4984-91b7-3d5cb0fa4db2",
+  "brief": "1. *Title:* Understanding Consumer Preferences and Market Opportunities for Women's Shoes in Paris\r\n\r\n2. *Objective:* To identify key consumer preferences, purchasing behaviors, and unmet needs within the Parisian women's shoe market. The research will provide actionable insights to inform product development, marketing strategies, and retail experiences for a women's shoe company. Key questions include:\r\n    * What styles and features are most desired by Parisian women?\r\n    * What factors influence their shoe purchasing decisions (e.g., price, comfort, brand reputation, sustainability)?\r\n    * Where do they currently shop for shoes and why?\r\n    * What are their pain points with existing shoe options or retail experiences?\r\n    * What opportunities exist for a new or existing women's shoe company to better serve the Parisian market?\r\n\r\n3. *Background:* The Parisian women's shoe market is competitive, encompassing a wide range of brands from luxury designers to fast-fashion retailers. The market is influenced by both global trends and uniquely Parisian style sensibilities. Understanding these nuances is crucial for any company seeking to succeed in this market. Key players include established luxury brands (e.g., Chanel, Dior, Saint Laurent), popular European retailers (e.g., Zara, H&M, Mango), and independent boutiques.\r\n\r\n4. *What We Know (Global/Current Insights):* Globally, the women's footwear market is experiencing growth, driven by increasing disposable incomes and fashion consciousness. E-commerce continues to play a significant role, with online sales accounting for a substantial portion of total revenue. Sustainability and ethical production are increasingly important to consumers, particularly in developed markets. The Parisian market is known for its emphasis on quality, style, and craftsmanship. There's a strong appreciation for classic designs, but also openness to new trends and innovations.\r\n\r\n5. *Methodology:* Qualitative Approach: This study utilized a qualitative approach to gain an in-depth understanding of user perceptions, motivations, and attitudes.\r\nSynthetic Focus Group: A synthetic focus group methodology was chosen, using AI-generated personas to simulate a group discussion. This approach allowed for the exploration of complex issues within controlled parameters, using profiles based on the target audience.\r\nAI-Generated Personas: Five distinct personas were created to represent the target audience\r\nDiscussion Guide: The discussion guide was designed to explore all facets of the research objectives.\r\n\r\n6. *Target Audience (Sample):* Parisian women aged 25-55, residing within the city limits or immediate suburbs. The sample will be segmented based on lifestyle, income, and fashion preferences.\r\n    *   **Segment 1: The Classic Parisian:** Women aged 35-55, with a moderate to high income, who value timeless style and quality craftsmanship. They are likely to purchase classic shoe styles (e.g., ballet flats, loafers, pumps) from established brands or independent boutiques. They prioritize comfort and durability over fleeting trends. They tend to be employed in professional roles (e.g., law, finance, medicine, government).\r\n    *   **Segment 2: The Fashion-Forward Parisian:** Women aged 25-40, with a moderate income, who are highly influenced by fashion trends and social media. They are more likely to experiment with different styles and brands, purchasing shoes from both high-end and fast-fashion retailers. Brand reputation and social influence are important factors. They are more likely to be employed in creative or marketing related fields.\r\n    *   **Segment 3: The Practical Parisian:** Women aged 30-50, with a moderate income, who prioritize comfort and practicality in their shoe choices. They seek versatile shoes that can be worn for work, leisure, and everyday activities. Price and durability are key considerations. They likely work in roles that require mobility.\r\n    *   **Segment 4: The Sustainable Parisian:** Women aged 25-45, with a moderate to high income, who are consciously seeking sustainable and ethically produced shoes. They are willing to pay a premium for brands that align with their values. Style and quality are still important, but sustainability is a primary driver. This segment will span roles in business, the arts, and government.\r\n\r\n7. *Deliverables:*\r\n    *   A comprehensive written report summarizing key findings, including detailed profiles of each target segment, their shoe preferences, purchasing behaviors, and unmet needs.\r\n    *   A presentation deck highlighting key insights and actionable recommendations for product development, marketing, and retail strategy.\r\n    *   Data visualizations illustrating key market trends and consumer preferences.\r\n    *   A detailed appendix including transcripts or summaries of the AI-generated persona synthetic focus group discussions.\r\n",
+  "questions": [
+    {
+      "text": "Have your heard of Galatasaray?",
+      "responses": {
+        "yes": 2,
+        "no": 97
+      }
+    },
+    {
+      "text": "Have your heard of Fenerbahce?",
+      "responses": {
+        "yes": 2,
+        "no": 97
+      }
+    }
+  ],
+  "personas": [
+    {
+      "name": "Isabelle Dubois",
+      "age": "42",
+      "gender": "Female",
+      "location": "Paris, 16th arrondissement",
+      "occupation": "Lawyer",
+      "income": "€95,000",
+      "education": "Master's Degree in Law",
+      "personality": [
+        "Formal",
+        "Analytical",
+        "Classic"
+      ],
+      "background": "Grew up in a traditional Parisian family. Values quality and tradition. Works long hours and needs shoes that are both stylish and comfortable for professional settings.",
+      "interests": [
+        "Classical music",
+        "Ballet",
+        "Fine dining",
+        "Museums"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Quality, Tradition, Professionalism",
+      "knowledge_domain": [
+        "Law",
+        "French history",
+        "Classical Arts"
+      ]
+    },
+    {
+      "name": "Chloé Martin",
+      "age": "28",
+      "gender": "Female",
+      "location": "Paris, Le Marais",
+      "occupation": "Marketing Manager",
+      "income": "€48,000",
+      "education": "Bachelor's Degree in Marketing",
+      "personality": [
+        "Friendly",
+        "Humorous",
+        "Fashion-forward"
+      ],
+      "background": "Active on social media and follows fashion trends closely. Enjoys experimenting with her style and expressing herself through fashion.",
+      "interests": [
+        "Fashion blogging",
+        "Social media",
+        "Live music",
+        "Art galleries"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Creativity, Self-expression, Trendiness",
+      "knowledge_domain": [
+        "Social Media Marketing",
+        "Fashion Trends",
+        "Digital Advertising"
+      ]
+    },
+    {
+      "name": "Sophie Lefevre",
+      "age": "35",
+      "gender": "Female",
+      "location": "Paris, 11th arrondissement",
+      "occupation": "Nurse",
+      "income": "€42,000",
+      "education": "Nursing Degree",
+      "personality": [
+        "Practical",
+        "Friendly",
+        "Reliable"
+      ],
+      "background": "Spends long hours on her feet. Needs durable and comfortable shoes that can withstand the demands of her job. Prioritizes functionality over high fashion.",
+      "interests": [
+        "Hiking",
+        "Gardening",
+        "Cooking",
+        "Spending time with family"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Comfort, Durability, Practicality",
+      "knowledge_domain": [
+        "Healthcare",
+        "First Aid",
+        "Patient Care"
+      ]
+    },
+    {
+      "name": "Léa Bernard",
+      "age": "32",
+      "gender": "Female",
+      "location": "Paris, 3rd arrondissement",
+      "occupation": "Environmental Consultant",
+      "income": "€60,000",
+      "education": "Master's Degree in Environmental Science",
+      "personality": [
+        "Analytical",
+        "Sustainable",
+        "Eco-conscious"
+      ],
+      "background": "Passionate about sustainability and ethical consumption. Seeks brands that are transparent about their environmental impact and labor practices.",
+      "interests": [
+        "Environmental activism",
+        "Sustainable living",
+        "Yoga",
+        "Organic food"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Sustainability, Ethical Consumption, Environmental Responsibility",
+      "knowledge_domain": [
+        "Environmental Science",
+        "Sustainability",
+        "Ethical Sourcing"
+      ]
+    },
+    {
+      "name": "Manon Garcia",
+      "age": "48",
+      "gender": "Female",
+      "location": "Neuilly-sur-Seine (suburb)",
+      "occupation": "Finance Director",
+      "income": "€120,000",
+      "education": "MBA",
+      "personality": [
+        "Formal",
+        "Analytical",
+        "Sophisticated"
+      ],
+      "background": "Executive who needs to look polished for important meetings. Prefers high-quality, classic shoes from luxury brands. Values comfort and style.",
+      "interests": [
+        "Opera",
+        "Traveling",
+        "Investing",
+        "Fine Wine"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Quality, Luxury, Professionalism",
+      "knowledge_domain": [
+        "Finance",
+        "Business Management",
+        "Luxury Goods"
+      ]
+    },
+    {
+      "name": "Camille Roux",
+      "age": "26",
+      "gender": "Female",
+      "location": "Paris, Belleville",
+      "occupation": "Freelance Graphic Designer",
+      "income": "€35,000",
+      "education": "Bachelor's Degree in Graphic Design",
+      "personality": [
+        "Creative",
+        "Independent",
+        "Trend-conscious"
+      ],
+      "background": "Expresses herself through fashion and enjoys finding unique pieces. Looks for affordable and stylish shoes that reflect her personality.",
+      "interests": [
+        "Photography",
+        "Street art",
+        "Independent films",
+        "Vintage shopping"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Creativity, Individuality, Affordability",
+      "knowledge_domain": [
+        "Graphic Design",
+        "Visual Arts",
+        "Social Media"
+      ]
+    },
+    {
+      "name": "Margot Clement",
+      "age": "39",
+      "gender": "Female",
+      "location": "Paris, Montmartre",
+      "occupation": "Restaurant Manager",
+      "income": "€55,000",
+      "education": "High School Diploma",
+      "personality": [
+        "Practical",
+        "Friendly",
+        "Efficient"
+      ],
+      "background": "On her feet all day managing a busy restaurant. Needs shoes that are comfortable, durable, and slip-resistant.",
+      "interests": [
+        "Cooking",
+        "Wine tasting",
+        "Local markets",
+        "Gardening"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Comfort, Durability, Practicality",
+      "knowledge_domain": [
+        "Restaurant Management",
+        "Customer Service",
+        "Food and Wine"
+      ]
+    },
+    {
+      "name": "Elodie Bonnet",
+      "age": "29",
+      "gender": "Female",
+      "location": "Saint-Germain-en-Laye (suburb)",
+      "occupation": "Teacher",
+      "income": "€40,000",
+      "education": "Master's Degree in Education",
+      "personality": [
+        "Patient",
+        "Caring",
+        "Sustainable"
+      ],
+      "background": "Wants shoes that are both comfortable for standing all day and ethically made. Values sustainability and fair labor practices.",
+      "interests": [
+        "Reading",
+        "Yoga",
+        "Volunteering",
+        "Environmental causes"
+      ],
+      "communication_style": [
+        "Informal",
+        "Friendly"
+      ],
+      "core_values": "Comfort, Sustainability, Ethical Production",
+      "knowledge_domain": [
+        "Education",
+        "Child Development",
+        "Sustainable Living"
+      ]
+    },
+    {
+      "name": "Juliette Moreau",
+      "age": "52",
+      "gender": "Female",
+      "location": "Paris, 7th arrondissement",
+      "occupation": "Art Gallery Owner",
+      "income": "€150,000",
+      "education": "PhD in Art History",
+      "personality": [
+        "Elegant",
+        "Sophisticated",
+        "Knowledgeable"
+      ],
+      "background": "Curates and appreciates art. Desires shoes that are both stylish and reflect her artistic sensibility. Values quality and craftsmanship.",
+      "interests": [
+        "Art history",
+        "Contemporary art",
+        "Opera",
+        "Traveling"
+      ],
+      "communication_style": [
+        "Formal",
+        "Verbose"
+      ],
+      "core_values": "Aesthetics, Quality, Intellectual Pursuits",
+      "knowledge_domain": [
+        "Art History",
+        "Contemporary Art",
+        "Luxury Goods"
+      ]
+    },
+    {
+      "name": "Sarah Nguyen",
+      "age": "27",
+      "gender": "Female",
+      "location": "Paris, 13th arrondissement",
+      "occupation": "Software Engineer",
+      "income": "€58,000",
+      "education": "Master's Degree in Computer Science",
+      "personality": [
+        "Analytical",
+        "Practical",
+        "Tech-savvy"
+      ],
+      "background": "Values comfort and practicality for her daily commute. Seeks shoes that are both functional and stylish. Interested in innovative designs.",
+      "interests": [
+        "Technology",
+        "Gaming",
+        "Coding",
+        "Science fiction"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Functionality, Innovation, Efficiency",
+      "knowledge_domain": [
+        "Computer Science",
+        "Software Development",
+        "Artificial Intelligence"
+      ]
+    },
+    {
+      "name": "Amina Diallo",
+      "age": "31",
+      "gender": "Female",
+      "location": "Aubervilliers (suburb)",
+      "occupation": "Social Worker",
+      "income": "€38,000",
+      "education": "Master's Degree in Social Work",
+      "personality": [
+        "Empathetic",
+        "Practical",
+        "Community-oriented"
+      ],
+      "background": "Needs comfortable and durable shoes for visiting clients and attending meetings. Prioritizes affordability and ethical sourcing.",
+      "interests": [
+        "Community development",
+        "Social justice",
+        "Reading",
+        "Spending time with family"
+      ],
+      "communication_style": [
+        "Informal",
+        "Friendly"
+      ],
+      "core_values": "Affordability, Ethical Production, Social Responsibility",
+      "knowledge_domain": [
+        "Social Work",
+        "Community Resources",
+        "Child Welfare"
+      ]
+    },
+    {
+      "name": "Florence Dubois",
+      "age": "45",
+      "gender": "Female",
+      "location": "Paris, 8th arrondissement",
+      "occupation": "Real Estate Agent",
+      "income": "€85,000",
+      "education": "Bachelor's Degree in Business Administration",
+      "personality": [
+        "Professional",
+        "Outgoing",
+        "Fashion-conscious"
+      ],
+      "background": "Needs stylish and comfortable shoes for showing properties to clients. Values a polished and professional appearance.",
+      "interests": [
+        "Real estate",
+        "Interior design",
+        "Fashion",
+        "Traveling"
+      ],
+      "communication_style": [
+        "Formal",
+        "Friendly"
+      ],
+      "core_values": "Style, Comfort, Professionalism",
+      "knowledge_domain": [
+        "Real Estate",
+        "Sales",
+        "Customer Service"
+      ]
+    },
+    {
+      "name": "Nadia Benali",
+      "age": "25",
+      "gender": "Female",
+      "location": "Paris, 18th arrondissement",
+      "occupation": "Student",
+      "income": "€15,000 (part-time job)",
+      "education": "University Student (Sociology)",
+      "personality": [
+        "Independent",
+        "Creative",
+        "Value-conscious"
+      ],
+      "background": "Looking for affordable and stylish shoes for everyday wear. Likes to experiment with her style and find unique pieces.",
+      "interests": [
+        "Art",
+        "Music",
+        "Social justice",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Affordability, Individuality, Social Awareness",
+      "knowledge_domain": [
+        "Sociology",
+        "Current Events",
+        "Popular Culture"
+      ]
+    },
+    {
+      "name": "Valérie Picard",
+      "age": "50",
+      "gender": "Female",
+      "location": "Versailles (suburb)",
+      "occupation": "Librarian",
+      "income": "€52,000",
+      "education": "Master's Degree in Library Science",
+      "personality": [
+        "Reserved",
+        "Practical",
+        "Comfort-oriented"
+      ],
+      "background": "Prioritizes comfort and durability for long hours of standing and walking. Prefers classic styles and neutral colors.",
+      "interests": [
+        "Reading",
+        "History",
+        "Gardening",
+        "Classical music"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Comfort, Durability, Practicality",
+      "knowledge_domain": [
+        "Library Science",
+        "Literature",
+        "History"
+      ]
+    },
+    {
+      "name": "Claire Dupont",
+      "age": "37",
+      "gender": "Female",
+      "location": "Paris, 4th arrondissement",
+      "occupation": "Chef",
+      "income": "€65,000",
+      "education": "Culinary Arts Diploma",
+      "personality": [
+        "Passionate",
+        "Practical",
+        "Demanding"
+      ],
+      "background": "Needs durable, slip-resistant, and comfortable shoes for working in a fast-paced kitchen environment. Style is secondary to functionality.",
+      "interests": [
+        "Cooking",
+        "Food blogging",
+        "Wine tasting",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Functionality, Durability, Safety",
+      "knowledge_domain": [
+        "Culinary Arts",
+        "Food Safety",
+        "Restaurant Management"
+      ]
+    },
+    {
+      "name": "Olivia Leclerc",
+      "age": "28",
+      "gender": "Female",
+      "location": "Paris, 9th arrondissement",
+      "occupation": "Fashion Buyer",
+      "income": "€70,000",
+      "education": "Bachelor's Degree in Fashion Merchandising",
+      "personality": [
+        "Trendsetter",
+        "Fashion-forward",
+        "Influential"
+      ],
+      "background": "Always on the lookout for the latest trends in footwear. Values unique designs and high-quality materials. Brand reputation is important.",
+      "interests": [
+        "Fashion shows",
+        "Trend forecasting",
+        "Social media",
+        "Traveling"
+      ],
+      "communication_style": [
+        "Informal",
+        "Verbose"
+      ],
+      "core_values": "Style, Quality, Innovation",
+      "knowledge_domain": [
+        "Fashion Trends",
+        "Retail",
+        "Brand Management"
+      ]
+    },
+    {
+      "name": "Fatima Traoré",
+      "age": "41",
+      "gender": "Female",
+      "location": "Clichy-sous-Bois (suburb)",
+      "occupation": "Teacher's Assistant",
+      "income": "€28,000",
+      "education": "High School Diploma",
+      "personality": [
+        "Caring",
+        "Practical",
+        "Value-conscious"
+      ],
+      "background": "Needs comfortable and affordable shoes for working with children. Durability and ease of cleaning are important factors.",
+      "interests": [
+        "Reading",
+        "Cooking",
+        "Spending time with family",
+        "Community events"
+      ],
+      "communication_style": [
+        "Informal",
+        "Friendly"
+      ],
+      "core_values": "Affordability, Comfort, Durability",
+      "knowledge_domain": [
+        "Childcare",
+        "Education",
+        "Community Resources"
+      ]
+    },
+    {
+      "name": "Isabella Rossi",
+      "age": "33",
+      "gender": "Female",
+      "location": "Paris, 2nd arrondissement",
+      "occupation": "Freelance Writer",
+      "income": "€40,000",
+      "education": "Master's Degree in Journalism",
+      "personality": [
+        "Creative",
+        "Independent",
+        "Eco-conscious"
+      ],
+      "background": "Values sustainable and ethically produced shoes that are also stylish and comfortable. Enjoys supporting independent brands.",
+      "interests": [
+        "Writing",
+        "Travel",
+        "Sustainability",
+        "Art"
+      ],
+      "communication_style": [
+        "Informal",
+        "Verbose"
+      ],
+      "core_values": "Sustainability, Ethical Production, Creativity",
+      "knowledge_domain": [
+        "Journalism",
+        "Writing",
+        "Environmental Issues"
+      ]
+    },
+    {
+      "name": "Delphine Garnier",
+      "age": "55",
+      "gender": "Female",
+      "location": "Paris, 6th arrondissement",
+      "occupation": "Retired Professor",
+      "income": "€75,000 (pension)",
+      "education": "PhD in Literature",
+      "personality": [
+        "Elegant",
+        "Intellectual",
+        "Classic"
+      ],
+      "background": "Values high-quality, classic shoe styles that are both comfortable and stylish. Prefers established brands and independent boutiques.",
+      "interests": [
+        "Reading",
+        "Opera",
+        "Classical music",
+        "Traveling"
+      ],
+      "communication_style": [
+        "Formal",
+        "Verbose"
+      ],
+      "core_values": "Quality, Tradition, Intellectual Pursuits",
+      "knowledge_domain": [
+        "Literature",
+        "History",
+        "Philosophy"
+      ]
+    },
+    {
+      "name": "Sofia Silva",
+      "age": "29",
+      "gender": "Female",
+      "location": "Boulogne-Billancourt (suburb)",
+      "occupation": "Data Analyst",
+      "income": "€62,000",
+      "education": "Master's Degree in Statistics",
+      "personality": [
+        "Analytical",
+        "Practical",
+        "Efficient"
+      ],
+      "background": "Needs comfortable and durable shoes for her daily commute and work. Values functionality and quality. Not overly concerned with trends.",
+      "interests": [
+        "Data analysis",
+        "Gaming",
+        "Coding",
+        "Science fiction"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Functionality, Efficiency, Quality",
+      "knowledge_domain": [
+        "Statistics",
+        "Data Analysis",
+        "Programming"
+      ]
+    },
+    {
+      "name": "Sophie Dubois",
+      "age": "42",
+      "gender": "Female",
+      "location": "Paris, 6th arrondissement",
+      "occupation": "Lawyer",
+      "income": "€95,000",
+      "education": "Master's Degree in Law",
+      "personality": [
+        "Formal",
+        "Analytical",
+        "Classic"
+      ],
+      "background": "Grew up in a traditional Parisian family. Values quality and timeless style. Prefers classic brands and independent boutiques.",
+      "interests": [
+        "Opera",
+        "Ballet",
+        "Art Galleries",
+        "Fine Dining",
+        "Travel"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Quality, tradition, elegance",
+      "knowledge_domain": [
+        "Law",
+        "French Literature",
+        "Art History"
+      ]
+    },
+    {
+      "name": "Chloé Lefèvre",
+      "age": "28",
+      "gender": "Female",
+      "location": "Paris, 11th arrondissement",
+      "occupation": "Marketing Manager",
+      "income": "€48,000",
+      "education": "Bachelor's Degree in Marketing",
+      "personality": [
+        "Friendly",
+        "Humorous",
+        "Trendy"
+      ],
+      "background": "Active on social media and highly influenced by fashion trends. Enjoys experimenting with different styles and brands.",
+      "interests": [
+        "Fashion Blogs",
+        "Instagram",
+        "Concerts",
+        "Brunch",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Innovation, trendsetting, social connection",
+      "knowledge_domain": [
+        "Social Media Marketing",
+        "Fashion Trends",
+        "Digital Advertising"
+      ]
+    },
+    {
+      "name": "Nadia Traoré",
+      "age": "37",
+      "gender": "Female",
+      "location": "Paris, 18th arrondissement",
+      "occupation": "Nurse",
+      "income": "€42,000",
+      "education": "Nursing Diploma",
+      "personality": [
+        "Practical",
+        "Caring",
+        "Reliable"
+      ],
+      "background": "Prioritizes comfort and practicality in her shoe choices. Seeks versatile shoes for work and everyday activities.",
+      "interests": [
+        "Yoga",
+        "Hiking",
+        "Cooking",
+        "Spending time with family",
+        "Reading"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Comfort, practicality, reliability",
+      "knowledge_domain": [
+        "Healthcare",
+        "First Aid",
+        "Nutrition"
+      ]
+    },
+    {
+      "name": "Camille Bernard",
+      "age": "32",
+      "gender": "Female",
+      "location": "Paris, 3rd arrondissement",
+      "occupation": "Environmental Consultant",
+      "income": "€65,000",
+      "education": "Master's Degree in Environmental Science",
+      "personality": [
+        "Analytical",
+        "Environmentally Conscious",
+        "Stylish"
+      ],
+      "background": "Actively seeks sustainable and ethically produced shoes. Willing to pay a premium for brands that align with her values.",
+      "interests": [
+        "Sustainability",
+        "Ethical Fashion",
+        "Gardening",
+        "Traveling",
+        "Volunteer Work"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Sustainability, ethical production, social responsibility",
+      "knowledge_domain": [
+        "Environmental Science",
+        "Sustainable Fashion",
+        "Renewable Energy"
+      ]
+    },
+    {
+      "name": "Léa Martin",
+      "age": "26",
+      "gender": "Female",
+      "location": "Paris, 5th arrondissement",
+      "occupation": "Student",
+      "income": "€18,000",
+      "education": "Enrolled in University",
+      "personality": [
+        "Friendly",
+        "Trendy",
+        "Price-conscious"
+      ],
+      "background": "Student with limited income, looking for fashionable but affordable shoes. Likes to shop online and in fast-fashion stores.",
+      "interests": [
+        "Partying",
+        "Socializing",
+        "Fashion",
+        "Music",
+        "Dating"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Affordability, trendiness, social acceptance",
+      "knowledge_domain": [
+        "Literature",
+        "Philosophy",
+        "Current Events"
+      ]
+    },
+    {
+      "name": "Isabelle Gérard",
+      "age": "48",
+      "gender": "Female",
+      "location": "Neuilly-sur-Seine (suburb)",
+      "occupation": "Financial Analyst",
+      "income": "€110,000",
+      "education": "MBA",
+      "personality": [
+        "Formal",
+        "Practical",
+        "Sophisticated"
+      ],
+      "background": "Values comfort and quality in shoes. Prefers classic and elegant styles for work and social events.",
+      "interests": [
+        "Golf",
+        "Skiing",
+        "Classical Music",
+        "Fine Wines",
+        "Travel"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Quality, reliability, professionalism",
+      "knowledge_domain": [
+        "Finance",
+        "Investments",
+        "Economics"
+      ]
+    },
+    {
+      "name": "Manon Roussel",
+      "age": "31",
+      "gender": "Female",
+      "location": "Paris, 10th arrondissement",
+      "occupation": "Graphic Designer",
+      "income": "€55,000",
+      "education": "Bachelor's Degree in Graphic Design",
+      "personality": [
+        "Creative",
+        "Trendy",
+        "Indie"
+      ],
+      "background": "Enjoys unique and artistic shoe designs. Supports independent brands and local designers.",
+      "interests": [
+        "Art",
+        "Design",
+        "Music",
+        "Film",
+        "Photography"
+      ],
+      "communication_style": [
+        "Informal",
+        "Descriptive"
+      ],
+      "core_values": "Creativity, individuality, originality",
+      "knowledge_domain": [
+        "Graphic Design",
+        "Art History",
+        "Typography"
+      ]
+    },
+    {
+      "name": "Fatima Diallo",
+      "age": "40",
+      "gender": "Female",
+      "location": "Saint-Denis (suburb)",
+      "occupation": "Teacher",
+      "income": "€45,000",
+      "education": "Master's Degree in Education",
+      "personality": [
+        "Practical",
+        "Budget-conscious",
+        "Caring"
+      ],
+      "background": "Needs comfortable and affordable shoes for teaching. Prioritizes durability and value for money.",
+      "interests": [
+        "Reading",
+        "Gardening",
+        "Spending time with family",
+        "Community activities",
+        "Movies"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Affordability, comfort, practicality",
+      "knowledge_domain": [
+        "Education",
+        "Child Development",
+        "French Language"
+      ]
+    },
+    {
+      "name": "Hélène Moreau",
+      "age": "29",
+      "gender": "Female",
+      "location": "Paris, 4th arrondissement",
+      "occupation": "Chef",
+      "income": "€50,000",
+      "education": "Culinary Diploma",
+      "personality": [
+        "Practical",
+        "Comfort-oriented",
+        "Stylish"
+      ],
+      "background": "Requires durable and comfortable shoes for long hours in the kitchen. Appreciates stylish and professional designs.",
+      "interests": [
+        "Cooking",
+        "Wine Tasting",
+        "Food Blogs",
+        "Restaurants",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Direct"
+      ],
+      "core_values": "Comfort, durability, professionalism",
+      "knowledge_domain": [
+        "Culinary Arts",
+        "Food Science",
+        "Restaurant Management"
+      ]
+    },
+    {
+      "name": "Alice Rousseau",
+      "age": "35",
+      "gender": "Female",
+      "location": "Paris, 16th arrondissement",
+      "occupation": "Stay-at-home Mother",
+      "income": "N/A (Dependent on partner)",
+      "education": "Bachelor's Degree in History",
+      "personality": [
+        "Practical",
+        "Stylish",
+        "Family-oriented"
+      ],
+      "background": "Needs versatile shoes for everyday activities with her children. Values comfort, style, and durability.",
+      "interests": [
+        "Parenting",
+        "Children's activities",
+        "Cooking",
+        "Reading",
+        "Gardening"
+      ],
+      "communication_style": [
+        "Informal",
+        "Friendly"
+      ],
+      "core_values": "Family, comfort, style",
+      "knowledge_domain": [
+        "History",
+        "Parenting",
+        "Child Development"
+      ]
+    },
+    {
+      "name": "Valérie Dupont",
+      "age": "52",
+      "gender": "Female",
+      "location": "Paris, 7th arrondissement",
+      "occupation": "Government Official",
+      "income": "€120,000",
+      "education": "Master's Degree in Public Administration",
+      "personality": [
+        "Formal",
+        "Classic",
+        "Sophisticated"
+      ],
+      "background": "Values quality, comfort, and professional appearance. Prefers timeless designs and established brands.",
+      "interests": [
+        "Politics",
+        "History",
+        "Culture",
+        "Travel",
+        "Fine Arts"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Professionalism, integrity, tradition",
+      "knowledge_domain": [
+        "Political Science",
+        "Public Administration",
+        "International Relations"
+      ]
+    },
+    {
+      "name": "Justine Laurent",
+      "age": "27",
+      "gender": "Female",
+      "location": "Paris, 2nd arrondissement",
+      "occupation": "Freelance Writer",
+      "income": "€35,000",
+      "education": "Bachelor's Degree in Journalism",
+      "personality": [
+        "Creative",
+        "Bohemian",
+        "Indie"
+      ],
+      "background": "Seeks unique and stylish shoes that reflect her personality. Supports ethical and sustainable brands.",
+      "interests": [
+        "Writing",
+        "Reading",
+        "Traveling",
+        "Art",
+        "Music"
+      ],
+      "communication_style": [
+        "Informal",
+        "Descriptive"
+      ],
+      "core_values": "Creativity, sustainability, freedom",
+      "knowledge_domain": [
+        "Literature",
+        "Journalism",
+        "Art History"
+      ]
+    },
+    {
+      "name": "Sandrine Leclerc",
+      "age": "45",
+      "gender": "Female",
+      "location": "Boulogne-Billancourt (suburb)",
+      "occupation": "Business Owner (Café)",
+      "income": "€70,000",
+      "education": "High School Diploma",
+      "personality": [
+        "Practical",
+        "Friendly",
+        "Down-to-earth"
+      ],
+      "background": "Needs comfortable and durable shoes for long hours on her feet. Values affordability and practicality.",
+      "interests": [
+        "Cooking",
+        "Socializing",
+        "Gardening",
+        "Reading",
+        "Community Events"
+      ],
+      "communication_style": [
+        "Informal",
+        "Direct"
+      ],
+      "core_values": "Community, hard work, hospitality",
+      "knowledge_domain": [
+        "Restaurant Management",
+        "Customer Service",
+        "French Cuisine"
+      ]
+    },
+    {
+      "name": "Emma Garnier",
+      "age": "33",
+      "gender": "Female",
+      "location": "Paris, 9th arrondissement",
+      "occupation": "Museum Curator",
+      "income": "€60,000",
+      "education": "Master's Degree in Art History",
+      "personality": [
+        "Intellectual",
+        "Stylish",
+        "Classic"
+      ],
+      "background": "Prefers elegant and comfortable shoes that can be worn for long hours at work and social events. Appreciates quality craftsmanship.",
+      "interests": [
+        "Art",
+        "History",
+        "Culture",
+        "Travel",
+        "Reading"
+      ],
+      "communication_style": [
+        "Formal",
+        "Descriptive"
+      ],
+      "core_values": "Culture, knowledge, beauty",
+      "knowledge_domain": [
+        "Art History",
+        "Museum Studies",
+        "French Art"
+      ]
+    },
+    {
+      "name": "Louise Chevalier",
+      "age": "29",
+      "gender": "Female",
+      "location": "Paris, 1st arrondissement",
+      "occupation": "Fashion Blogger",
+      "income": "€40,000",
+      "education": "Bachelor's Degree in Communications",
+      "personality": [
+        "Trendy",
+        "Social Media Savvy",
+        "Influential"
+      ],
+      "background": "Highly influenced by fashion trends and social media. Enjoys experimenting with different styles and brands.",
+      "interests": [
+        "Fashion",
+        "Beauty",
+        "Travel",
+        "Social Media",
+        "Photography"
+      ],
+      "communication_style": [
+        "Informal",
+        "Engaging"
+      ],
+      "core_values": "Trendiness, self-expression, social influence",
+      "knowledge_domain": [
+        "Fashion Trends",
+        "Social Media Marketing",
+        "Blogging"
+      ]
+    },
+    {
+      "name": "Juliette Berger",
+      "age": "39",
+      "gender": "Female",
+      "location": "Issy-les-Moulineaux (suburb)",
+      "occupation": "Software Engineer",
+      "income": "€85,000",
+      "education": "Master's Degree in Computer Science",
+      "personality": [
+        "Practical",
+        "Comfort-oriented",
+        "Technical"
+      ],
+      "background": "Needs comfortable and durable shoes for work and leisure. Prioritizes functionality and quality.",
+      "interests": [
+        "Technology",
+        "Gaming",
+        "Reading",
+        "Travel",
+        "Hiking"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Functionality, efficiency, innovation",
+      "knowledge_domain": [
+        "Computer Science",
+        "Software Development",
+        "Data Analysis"
+      ]
+    },
+    {
+      "name": "Amélie Dubois",
+      "age": "25",
+      "gender": "Female",
+      "location": "Paris, 13th arrondissement",
+      "occupation": "Barista",
+      "income": "€25,000",
+      "education": "High School Diploma",
+      "personality": [
+        "Friendly",
+        "Casual",
+        "Budget-conscious"
+      ],
+      "background": "Needs comfortable and affordable shoes for long shifts at work. Enjoys trendy and casual styles.",
+      "interests": [
+        "Music",
+        "Coffee",
+        "Socializing",
+        "Movies",
+        "Reading"
+      ],
+      "communication_style": [
+        "Informal",
+        "Friendly"
+      ],
+      "core_values": "Affordability, comfort, sociability",
+      "knowledge_domain": [
+        "Coffee Making",
+        "Customer Service",
+        "French Culture"
+      ]
+    },
+    {
+      "name": "Aurelie Bernard",
+      "age": "41",
+      "gender": "Female",
+      "location": "Versailles",
+      "occupation": "Architect",
+      "income": "€78,000",
+      "education": "Master's Degree in Architecture",
+      "personality": [
+        "Creative",
+        "Stylish",
+        "Professional"
+      ],
+      "background": "Values both design and practicality. Needs shoes that are comfortable for site visits but also stylish for client meetings.",
+      "interests": [
+        "Architecture",
+        "Design",
+        "Travel",
+        "Art",
+        "Photography"
+      ],
+      "communication_style": [
+        "Formal",
+        "Descriptive"
+      ],
+      "core_values": "Design, functionality, quality",
+      "knowledge_domain": [
+        "Architecture",
+        "Urban Planning",
+        "Art History"
+      ]
+    },
+    {
+      "name": "Sophie Meunier",
+      "age": "34",
+      "gender": "Female",
+      "location": "Paris, 8th arrondissement",
+      "occupation": "Luxury Goods Sales Associate",
+      "income": "€58,000",
+      "education": "Bachelor's Degree in Business Administration",
+      "personality": [
+        "Stylish",
+        "Confident",
+        "Customer-focused"
+      ],
+      "background": "Needs fashionable and comfortable shoes that project a professional image. Values quality and brand reputation.",
+      "interests": [
+        "Fashion",
+        "Luxury Goods",
+        "Travel",
+        "Networking",
+        "Fine Dining"
+      ],
+      "communication_style": [
+        "Formal",
+        "Persuasive"
+      ],
+      "core_values": "Style, quality, customer satisfaction",
+      "knowledge_domain": [
+        "Luxury Goods",
+        "Sales",
+        "Customer Service"
+      ]
+    },
+    {
+      "name": "Claire Thomas",
+      "age": "47",
+      "gender": "Female",
+      "location": "Le Vésinet (suburb)",
+      "occupation": "Dentist",
+      "income": "€130,000",
+      "education": "Doctorate in Dental Surgery",
+      "personality": [
+        "Practical",
+        "Professional",
+        "Reliable"
+      ],
+      "background": "Needs comfortable and supportive shoes for long hours on her feet. Values quality, hygiene, and functionality.",
+      "interests": [
+        "Healthcare",
+        "Science",
+        "Reading",
+        "Gardening",
+        "Travel"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Health, hygiene, professionalism",
+      "knowledge_domain": [
+        "Dentistry",
+        "Medical Science",
+        "Anatomy"
+      ]
+    },
+    {
+      "name": "Sophie Dubois",
+      "age": "42",
+      "gender": "Female",
+      "location": "Paris, 16th arrondissement",
+      "occupation": "Lawyer",
+      "income": "€95,000",
+      "education": "Master's Degree in Law",
+      "personality": [
+        "Formal",
+        "Analytical",
+        "Reserved",
+        "Classic"
+      ],
+      "background": "Sophie grew up in a traditional Parisian family. She values quality and timeless elegance in her wardrobe, preferring classic styles that reflect her professional status.",
+      "interests": [
+        "Ballet",
+        "Opera",
+        "Fine Dining",
+        "Art History",
+        "Traveling"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Quality, tradition, elegance, professionalism",
+      "knowledge_domain": [
+        "Law",
+        "Art History",
+        "French Culture"
+      ]
+    },
+    {
+      "name": "Chloé Lefèvre",
+      "age": "28",
+      "gender": "Female",
+      "location": "Paris, Le Marais",
+      "occupation": "Social Media Manager",
+      "income": "€48,000",
+      "education": "Bachelor's Degree in Communications",
+      "personality": [
+        "Friendly",
+        "Humorous",
+        "Trendy",
+        "Outgoing"
+      ],
+      "background": "Chloé is passionate about fashion and social media. She loves experimenting with new trends and sharing her style on Instagram.",
+      "interests": [
+        "Fashion blogging",
+        "Photography",
+        "Concerts",
+        "Brunch",
+        "Social Media"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang",
+        "Verbose"
+      ],
+      "core_values": "Creativity, self-expression, social connection, trendsetting",
+      "knowledge_domain": [
+        "Social Media Marketing",
+        "Fashion Trends",
+        "Photography"
+      ]
+    },
+    {
+      "name": "Nadia Benali",
+      "age": "35",
+      "gender": "Female",
+      "location": "Paris, Belleville",
+      "occupation": "Nurse",
+      "income": "€55,000",
+      "education": "Nursing Diploma",
+      "personality": [
+        "Practical",
+        "Empathetic",
+        "Reliable",
+        "Comfort-oriented"
+      ],
+      "background": "Nadia works long hours on her feet and needs shoes that are comfortable and durable. She prioritizes practicality and value for money.",
+      "interests": [
+        "Hiking",
+        "Cooking",
+        "Gardening",
+        "Family time",
+        "Volunteering"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Comfort, practicality, health, family, community",
+      "knowledge_domain": [
+        "Healthcare",
+        "First Aid",
+        "Nutrition"
+      ]
+    },
+    {
+      "name": "Léa Martin",
+      "age": "29",
+      "gender": "Female",
+      "location": "Paris, Canal Saint-Martin",
+      "occupation": "Graphic Designer",
+      "income": "€62,000",
+      "education": "Bachelor's Degree in Graphic Design",
+      "personality": [
+        "Creative",
+        "Eco-conscious",
+        "Independent",
+        "Stylish"
+      ],
+      "background": "Léa is committed to sustainable living and seeks out ethically produced goods. She appreciates stylish designs but prioritizes environmental impact.",
+      "interests": [
+        "Sustainable fashion",
+        "Veganism",
+        "Yoga",
+        "Art",
+        "Environmental activism"
+      ],
+      "communication_style": [
+        "Informal",
+        "Passionate"
+      ],
+      "core_values": "Sustainability, ethics, creativity, independence, social justice",
+      "knowledge_domain": [
+        "Graphic Design",
+        "Sustainable Living",
+        "Environmental Issues"
+      ]
+    },
+    {
+      "name": "Isabelle Moreau",
+      "age": "48",
+      "gender": "Female",
+      "location": "Neuilly-sur-Seine (suburb of Paris)",
+      "occupation": "Finance Director",
+      "income": "€120,000",
+      "education": "MBA",
+      "personality": [
+        "Formal",
+        "Driven",
+        "Sophisticated",
+        "Quality-focused"
+      ],
+      "background": "Isabelle is a successful executive who values high-quality, classic pieces that reflect her professional status. She appreciates luxury brands and excellent craftsmanship.",
+      "interests": [
+        "Classical Music",
+        "Golf",
+        "Wine Tasting",
+        "Luxury Travel",
+        "Philanthropy"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Achievement, quality, elegance, professionalism, family",
+      "knowledge_domain": [
+        "Finance",
+        "Business Management",
+        "Investments"
+      ]
+    },
+    {
+      "name": "Amélie Rousseau",
+      "age": "26",
+      "gender": "Female",
+      "location": "Paris, 11th arrondissement",
+      "occupation": "Marketing Assistant",
+      "income": "€35,000",
+      "education": "Bachelor's Degree in Marketing",
+      "personality": [
+        "Trendy",
+        "Enthusiastic",
+        "Social",
+        "Budget-conscious"
+      ],
+      "background": "Amélie is starting her career and loves to stay on top of the latest trends. She looks for stylish options that fit her budget.",
+      "interests": [
+        "Fashion",
+        "Music",
+        "Dancing",
+        "Parties",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang",
+        "Verbose"
+      ],
+      "core_values": "Fun, friendship, style, affordability, adventure",
+      "knowledge_domain": [
+        "Social Media",
+        "Marketing",
+        "Pop Culture"
+      ]
+    },
+    {
+      "name": "Claire Dupont",
+      "age": "38",
+      "gender": "Female",
+      "location": "Paris, 5th arrondissement",
+      "occupation": "University Professor",
+      "income": "€75,000",
+      "education": "PhD in Literature",
+      "personality": [
+        "Intellectual",
+        "Reserved",
+        "Comfort-oriented",
+        "Classic"
+      ],
+      "background": "Claire values comfort and practicality in her clothing, opting for timeless styles that are suitable for her academic environment.",
+      "interests": [
+        "Reading",
+        "Writing",
+        "Museums",
+        "Theater",
+        "Traveling"
+      ],
+      "communication_style": [
+        "Formal",
+        "Analytical"
+      ],
+      "core_values": "Knowledge, education, intellectual pursuits, comfort, practicality",
+      "knowledge_domain": [
+        "Literature",
+        "History",
+        "Philosophy"
+      ]
+    },
+    {
+      "name": "Fatima Diallo",
+      "age": "32",
+      "gender": "Female",
+      "location": "Saint-Denis (suburb of Paris)",
+      "occupation": "Teacher",
+      "income": "€42,000",
+      "education": "Master's Degree in Education",
+      "personality": [
+        "Caring",
+        "Practical",
+        "Budget-conscious",
+        "Reliable"
+      ],
+      "background": "Fatima needs durable and affordable shoes that are comfortable for spending long days on her feet in the classroom.",
+      "interests": [
+        "Reading",
+        "Cooking",
+        "Spending time with family",
+        "Community events",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Education, community, family, affordability, practicality",
+      "knowledge_domain": [
+        "Education",
+        "Child Development",
+        "Cultural Diversity"
+      ]
+    },
+    {
+      "name": "Manon Garcia",
+      "age": "27",
+      "gender": "Female",
+      "location": "Paris, 3rd arrondissement",
+      "occupation": "Freelance Artist",
+      "income": "€30,000",
+      "education": "Art School Diploma",
+      "personality": [
+        "Creative",
+        "Bohemian",
+        "Independent",
+        "Expressive"
+      ],
+      "background": "Manon expresses her individuality through her unique and artistic style. She seeks shoes that are both stylish and comfortable for wandering around the city.",
+      "interests": [
+        "Painting",
+        "Sculpting",
+        "Music",
+        "Fashion",
+        "Traveling"
+      ],
+      "communication_style": [
+        "Informal",
+        "Passionate"
+      ],
+      "core_values": "Creativity, self-expression, freedom, independence, authenticity",
+      "knowledge_domain": [
+        "Art",
+        "Design",
+        "Fashion"
+      ]
+    },
+    {
+      "name": "Justine Bernard",
+      "age": "45",
+      "gender": "Female",
+      "location": "Versailles (suburb of Paris)",
+      "occupation": "Business Owner",
+      "income": "€80,000",
+      "education": "Bachelor's Degree in Business Administration",
+      "personality": [
+        "Professional",
+        "Driven",
+        "Sophisticated",
+        "Quality-focused"
+      ],
+      "background": "Justine runs her own small business and needs shoes that are both stylish and comfortable for meetings and events. She values quality and durability.",
+      "interests": [
+        "Business",
+        "Networking",
+        "Travel",
+        "Fine Dining",
+        "Family"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Success, quality, professionalism, family, community",
+      "knowledge_domain": [
+        "Business Management",
+        "Finance",
+        "Marketing"
+      ]
+    },
+    {
+      "name": "Camille Chevalier",
+      "age": "31",
+      "gender": "Female",
+      "location": "Paris, 10th arrondissement",
+      "occupation": "Restaurant Manager",
+      "income": "€40,000",
+      "education": "Hospitality Diploma",
+      "personality": [
+        "Friendly",
+        "Practical",
+        "Reliable",
+        "Comfort-oriented"
+      ],
+      "background": "Camille spends long hours on her feet managing a busy restaurant. She needs shoes that are comfortable, slip-resistant, and durable.",
+      "interests": [
+        "Cooking",
+        "Dining out",
+        "Travel",
+        "Spending time with friends",
+        "Movies"
+      ],
+      "communication_style": [
+        "Informal",
+        "Direct"
+      ],
+      "core_values": "Reliability, hard work, customer service, teamwork, comfort",
+      "knowledge_domain": [
+        "Hospitality",
+        "Customer Service",
+        "Food and Beverage"
+      ]
+    },
+    {
+      "name": "Mathilde Leclerc",
+      "age": "25",
+      "gender": "Female",
+      "location": "Paris, 18th arrondissement",
+      "occupation": "Student",
+      "income": "€15,000 (part-time job and allowance)",
+      "education": "University Student (Art History)",
+      "personality": [
+        "Creative",
+        "Trendy",
+        "Budget-conscious",
+        "Independent"
+      ],
+      "background": "Mathilde is a student with a passion for art and fashion. She's always looking for stylish and affordable shoes to complete her outfits.",
+      "interests": [
+        "Art",
+        "Fashion",
+        "Music",
+        "Photography",
+        "Traveling"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Creativity, self-expression, independence, affordability, exploration",
+      "knowledge_domain": [
+        "Art History",
+        "Fashion Trends",
+        "Photography"
+      ]
+    },
+    {
+      "name": "Amina Traoré",
+      "age": "40",
+      "gender": "Female",
+      "location": "Clichy-sous-Bois (suburb of Paris)",
+      "occupation": "Social Worker",
+      "income": "€45,000",
+      "education": "Master's Degree in Social Work",
+      "personality": [
+        "Empathetic",
+        "Practical",
+        "Reliable",
+        "Comfort-oriented"
+      ],
+      "background": "Amina works with vulnerable communities and needs shoes that are comfortable and practical for visiting clients and attending meetings.",
+      "interests": [
+        "Community service",
+        "Reading",
+        "Cooking",
+        "Spending time with family",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Direct"
+      ],
+      "core_values": "Social justice, equality, compassion, community, family",
+      "knowledge_domain": [
+        "Social Work",
+        "Community Development",
+        "Human Rights"
+      ]
+    },
+    {
+      "name": "Sophie Rousseau",
+      "age": "52",
+      "gender": "Female",
+      "location": "Paris, 7th arrondissement",
+      "occupation": "Retired Teacher",
+      "income": "€60,000 (pension)",
+      "education": "Master's Degree in Education",
+      "personality": [
+        "Classic",
+        "Comfort-oriented",
+        "Practical",
+        "Quality-focused"
+      ],
+      "background": "Sophie enjoys her retirement by pursuing her hobbies and spending time with her grandchildren. She values comfortable and durable shoes for everyday activities.",
+      "interests": [
+        "Gardening",
+        "Reading",
+        "Traveling",
+        "Spending time with family",
+        "Museums"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Family, comfort, quality, tradition, education",
+      "knowledge_domain": [
+        "History",
+        "Literature",
+        "Education"
+      ]
+    },
+    {
+      "name": "Lila Dubois",
+      "age": "29",
+      "gender": "Female",
+      "location": "Paris, 4th arrondissement",
+      "occupation": "Florist",
+      "income": "€38,000",
+      "education": "Vocational Diploma in Floristry",
+      "personality": [
+        "Creative",
+        "Practical",
+        "Nature-loving",
+        "Independent"
+      ],
+      "background": "Lila owns a small flower shop in Le Marais. She needs shoes that are comfortable for standing all day and stylish enough for meeting clients.",
+      "interests": [
+        "Flowers",
+        "Gardening",
+        "Art",
+        "Fashion",
+        "Traveling"
+      ],
+      "communication_style": [
+        "Informal",
+        "Friendly"
+      ],
+      "core_values": "Creativity, beauty, nature, independence, customer service",
+      "knowledge_domain": [
+        "Floristry",
+        "Gardening",
+        "Art"
+      ]
+    },
+    {
+      "name": "Elodie Blanc",
+      "age": "36",
+      "gender": "Female",
+      "location": "Boulogne-Billancourt (suburb of Paris)",
+      "occupation": "Stay-at-home mother",
+      "income": "€0 (dependent on husband's income)",
+      "education": "Bachelor's Degree in Psychology",
+      "personality": [
+        "Practical",
+        "Family-oriented",
+        "Budget-conscious",
+        "Comfort-oriented"
+      ],
+      "background": "Elodie spends her days caring for her children and running errands. She needs shoes that are comfortable, durable, and affordable.",
+      "interests": [
+        "Family",
+        "Cooking",
+        "Reading",
+        "Spending time with friends",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Direct"
+      ],
+      "core_values": "Family, children, home, affordability, practicality",
+      "knowledge_domain": [
+        "Child Development",
+        "Psychology",
+        "Nutrition"
+      ]
+    },
+    {
+      "name": "Nathalie Girard",
+      "age": "47",
+      "gender": "Female",
+      "location": "Paris, 6th arrondissement",
+      "occupation": "Art Gallery Owner",
+      "income": "€150,000",
+      "education": "Master's Degree in Art History",
+      "personality": [
+        "Sophisticated",
+        "Quality-focused",
+        "Independent",
+        "Stylish"
+      ],
+      "background": "Nathalie owns a prestigious art gallery in Saint-Germain-des-Prés. She needs shoes that are elegant, high-quality, and reflect her sophisticated taste.",
+      "interests": [
+        "Art",
+        "Fashion",
+        "Travel",
+        "Fine Dining",
+        "Networking"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Art, quality, elegance, independence, success",
+      "knowledge_domain": [
+        "Art History",
+        "Fine Art",
+        "Business Management"
+      ]
+    },
+    {
+      "name": "Zoe Martinez",
+      "age": "24",
+      "gender": "Female",
+      "location": "Paris, 19th arrondissement",
+      "occupation": "Au Pair",
+      "income": "€800 per month (plus room and board)",
+      "education": "High School Diploma",
+      "personality": [
+        "Friendly",
+        "Adventurous",
+        "Budget-conscious",
+        "Trendy"
+      ],
+      "background": "Zoe is an au pair from Spain, living in Paris to improve her French and experience a new culture. She needs affordable and stylish shoes for exploring the city.",
+      "interests": [
+        "Travel",
+        "Languages",
+        "Music",
+        "Fashion",
+        "Meeting new people"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Adventure, independence, friendship, affordability, exploration",
+      "knowledge_domain": [
+        "Languages",
+        "Travel",
+        "Childcare"
+      ]
+    },
+    {
+      "name": "Delphine Roux",
+      "age": "39",
+      "gender": "Female",
+      "location": "Suresnes (suburb of Paris)",
+      "occupation": "Marketing Manager",
+      "income": "€70,000",
+      "education": "Master's Degree in Marketing",
+      "personality": [
+        "Professional",
+        "Driven",
+        "Stylish",
+        "Trend-conscious"
+      ],
+      "background": "Delphine works in marketing and needs shoes that are both stylish and comfortable for meetings and events. She likes to stay on top of the latest fashion trends.",
+      "interests": [
+        "Fashion",
+        "Travel",
+        "Technology",
+        "Networking",
+        "Fine Dining"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Success, style, innovation, professionalism, family",
+      "knowledge_domain": [
+        "Marketing",
+        "Advertising",
+        "Social Media"
+      ]
+    },
+    {
+      "name": "Lea Berger",
+      "age": "33",
+      "gender": "Female",
+      "location": "Paris, 2nd arrondissement",
+      "occupation": "Freelance Journalist",
+      "income": "€45,000",
+      "education": "Master's Degree in Journalism",
+      "personality": [
+        "Independent",
+        "Intellectual",
+        "Stylish",
+        "Comfort-oriented"
+      ],
+      "background": "Lea is a freelance journalist who values comfort and style in her everyday wardrobe. She needs shoes that are practical for running around the city and attending press events.",
+      "interests": [
+        "Writing",
+        "Reading",
+        "Politics",
+        "Travel",
+        "Social Issues"
+      ],
+      "communication_style": [
+        "Informal",
+        "Analytical"
+      ],
+      "core_values": "Truth, integrity, independence, social justice, comfort",
+      "knowledge_domain": [
+        "Journalism",
+        "Politics",
+        "Social Issues"
+      ]
+    },
+    {
+      "name": "Sophie Dubois",
+      "age": "42",
+      "gender": "Female",
+      "location": "Paris, 16th arrondissement",
+      "occupation": "Lawyer",
+      "income": "€90,000",
+      "education": "Master's Degree in Law",
+      "personality": [
+        "Analytical",
+        "Formal",
+        "Classic"
+      ],
+      "background": "Grew up in a traditional Parisian family. Values quality and timeless elegance. Prefers investment pieces over fast fashion.",
+      "interests": [
+        "Classical music",
+        "Ballet",
+        "Art exhibitions",
+        "Fine dining"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Quality, tradition, elegance",
+      "knowledge_domain": [
+        "Law",
+        "Finance",
+        "Art History"
+      ]
+    },
+    {
+      "name": "Léa Martin",
+      "age": "28",
+      "gender": "Female",
+      "location": "Paris, Le Marais",
+      "occupation": "Marketing Manager",
+      "income": "€55,000",
+      "education": "Bachelor's Degree in Marketing",
+      "personality": [
+        "Friendly",
+        "Humorous",
+        "Fashion-forward"
+      ],
+      "background": "A digital native with a passion for trends. Follows fashion influencers and enjoys experimenting with her style.",
+      "interests": [
+        "Social media",
+        "Fashion blogging",
+        "Concerts",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Creativity, trendiness, social connection",
+      "knowledge_domain": [
+        "Social Media Marketing",
+        "Fashion Trends",
+        "Event Planning"
+      ]
+    },
+    {
+      "name": "Chloé Bernard",
+      "age": "35",
+      "gender": "Female",
+      "location": "Paris, 11th arrondissement",
+      "occupation": "Elementary School Teacher",
+      "income": "€40,000",
+      "education": "Master's Degree in Education",
+      "personality": [
+        "Practical",
+        "Friendly",
+        "Patient"
+      ],
+      "background": "Values comfort and practicality due to her active job. Needs versatile shoes that can withstand daily wear and tear.",
+      "interests": [
+        "Reading",
+        "Gardening",
+        "Spending time with family",
+        "Yoga"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Comfort, practicality, affordability",
+      "knowledge_domain": [
+        "Education",
+        "Child Development",
+        "First Aid"
+      ]
+    },
+    {
+      "name": "Amélie Dupont",
+      "age": "32",
+      "gender": "Female",
+      "location": "Paris, 3rd arrondissement",
+      "occupation": "Environmental Consultant",
+      "income": "€65,000",
+      "education": "Master's Degree in Environmental Science",
+      "personality": [
+        "Analytical",
+        "Sustainable",
+        "Ethical"
+      ],
+      "background": "Deeply committed to sustainability and ethical practices. Seeks brands that align with her values, even if it means paying more.",
+      "interests": [
+        "Environmental activism",
+        "Organic gardening",
+        "Hiking",
+        "Sustainable living"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Sustainability, ethics, environmental responsibility",
+      "knowledge_domain": [
+        "Environmental Science",
+        "Sustainable Business Practices",
+        "Renewable Energy"
+      ]
+    },
+    {
+      "name": "Isabelle Moreau",
+      "age": "48",
+      "gender": "Female",
+      "location": "Neuilly-sur-Seine (suburb of Paris)",
+      "occupation": "Financial Analyst",
+      "income": "€110,000",
+      "education": "MBA",
+      "personality": [
+        "Formal",
+        "Analytical",
+        "Classic"
+      ],
+      "background": "A seasoned professional with a sophisticated style. Prefers classic designs and investment pieces.",
+      "interests": [
+        "Investment",
+        "Opera",
+        "Travel",
+        "Golf"
+      ],
+      "communication_style": [
+        "Formal",
+        "Precise"
+      ],
+      "core_values": "Quality, sophistication, financial security",
+      "knowledge_domain": [
+        "Finance",
+        "Investment Strategies",
+        "Economics"
+      ]
+    },
+    {
+      "name": "Manon Roussel",
+      "age": "26",
+      "gender": "Female",
+      "location": "Paris, Belleville",
+      "occupation": "Freelance Graphic Designer",
+      "income": "€35,000",
+      "education": "Bachelor's Degree in Graphic Design",
+      "personality": [
+        "Creative",
+        "Trend-conscious",
+        "Independent"
+      ],
+      "background": "Loves expressing herself through fashion. Always on the lookout for unique and affordable pieces.",
+      "interests": [
+        "Art",
+        "Music",
+        "Photography",
+        "Vintage clothing"
+      ],
+      "communication_style": [
+        "Informal",
+        "Visual"
+      ],
+      "core_values": "Creativity, self-expression, individuality",
+      "knowledge_domain": [
+        "Graphic Design",
+        "Typography",
+        "Web Design"
+      ]
+    },
+    {
+      "name": "Camille Leclerc",
+      "age": "38",
+      "gender": "Female",
+      "location": "Paris, Montmartre",
+      "occupation": "Restaurant Manager",
+      "income": "€45,000",
+      "education": "High School Diploma",
+      "personality": [
+        "Practical",
+        "Friendly",
+        "Hardworking"
+      ],
+      "background": "On her feet all day. Needs durable and comfortable shoes that are also stylish enough for a restaurant environment.",
+      "interests": [
+        "Cooking",
+        "Wine tasting",
+        "Socializing",
+        "Local events"
+      ],
+      "communication_style": [
+        "Informal",
+        "Direct"
+      ],
+      "core_values": "Comfort, durability, practicality",
+      "knowledge_domain": [
+        "Restaurant Management",
+        "Customer Service",
+        "Wine"
+      ]
+    },
+    {
+      "name": "Justine Garnier",
+      "age": "29",
+      "gender": "Female",
+      "location": "Paris, Canal Saint-Martin",
+      "occupation": "Social Media Coordinator",
+      "income": "€48,000",
+      "education": "Bachelor's Degree in Communications",
+      "personality": [
+        "Trend-conscious",
+        "Socially aware",
+        "Informed"
+      ],
+      "background": "Always on the lookout for the latest trends and ethical brands. Values companies with a strong social mission.",
+      "interests": [
+        "Social media",
+        "Ethical fashion",
+        "Sustainable living",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Engaging"
+      ],
+      "core_values": "Ethics, sustainability, social responsibility",
+      "knowledge_domain": [
+        "Social Media",
+        "Content Creation",
+        "Digital Marketing"
+      ]
+    },
+    {
+      "name": "Aurelie Laurent",
+      "age": "52",
+      "gender": "Female",
+      "location": "Paris, 7th arrondissement",
+      "occupation": "Doctor",
+      "income": "€150,000",
+      "education": "Medical Degree",
+      "personality": [
+        "Formal",
+        "Analytical",
+        "Practical"
+      ],
+      "background": "Prefers comfortable, yet stylish shoes that she can wear all day at the hospital.",
+      "interests": [
+        "Medicine",
+        "Reading",
+        "Travel",
+        "Classical Music"
+      ],
+      "communication_style": [
+        "Formal",
+        "Precise"
+      ],
+      "core_values": "Quality, comfort, reliability",
+      "knowledge_domain": [
+        "Medicine",
+        "Healthcare",
+        "Biology"
+      ]
+    },
+    {
+      "name": "Nadia Benali",
+      "age": "31",
+      "gender": "Female",
+      "location": "Aubervilliers (suburb of Paris)",
+      "occupation": "Data Scientist",
+      "income": "€70,000",
+      "education": "Master's Degree in Data Science",
+      "personality": [
+        "Analytical",
+        "Practical",
+        "Modern"
+      ],
+      "background": "Enjoys blending comfort with a touch of modern style. Looks for durable and functional shoes.",
+      "interests": [
+        "Data Science",
+        "Technology",
+        "Gaming",
+        "Hiking"
+      ],
+      "communication_style": [
+        "Concise",
+        "Logical"
+      ],
+      "core_values": "Efficiency, innovation, functionality",
+      "knowledge_domain": [
+        "Data Science",
+        "Machine Learning",
+        "Statistics"
+      ]
+    },
+    {
+      "name": "Elena Rossi",
+      "age": "27",
+      "gender": "Female",
+      "location": "Paris, 10th arrondissement",
+      "occupation": "Barista",
+      "income": "€28,000",
+      "education": "High School Diploma",
+      "personality": [
+        "Friendly",
+        "Energetic",
+        "Trend-conscious"
+      ],
+      "background": "Needs shoes that are comfortable for standing long hours but also reflect her personal style.",
+      "interests": [
+        "Coffee",
+        "Music",
+        "Fashion",
+        "Socializing"
+      ],
+      "communication_style": [
+        "Informal",
+        "Enthusiastic"
+      ],
+      "core_values": "Comfort, style, affordability",
+      "knowledge_domain": [
+        "Coffee",
+        "Customer Service",
+        "Local Culture"
+      ]
+    },
+    {
+      "name": "Delphine Roux",
+      "age": "45",
+      "gender": "Female",
+      "location": "Versailles (suburb of Paris)",
+      "occupation": "Museum Curator",
+      "income": "€80,000",
+      "education": "PhD in Art History",
+      "personality": [
+        "Formal",
+        "Intellectual",
+        "Classic"
+      ],
+      "background": "Values quality and timeless elegance. Seeks shoes that are both comfortable and refined.",
+      "interests": [
+        "Art History",
+        "Museums",
+        "Classical Music",
+        "Gardening"
+      ],
+      "communication_style": [
+        "Formal",
+        "Eloquent"
+      ],
+      "core_values": "Knowledge, beauty, tradition",
+      "knowledge_domain": [
+        "Art History",
+        "Museum Management",
+        "Cultural Heritage"
+      ]
+    },
+    {
+      "name": "Fatima Diallo",
+      "age": "36",
+      "gender": "Female",
+      "location": "Saint-Denis (suburb of Paris)",
+      "occupation": "Nurse",
+      "income": "€50,000",
+      "education": "Bachelor's Degree in Nursing",
+      "personality": [
+        "Practical",
+        "Caring",
+        "Resilient"
+      ],
+      "background": "Spends long hours on her feet. Needs comfortable and supportive shoes that can withstand the demands of her job.",
+      "interests": [
+        "Healthcare",
+        "Helping others",
+        "Reading",
+        "Spending time with family"
+      ],
+      "communication_style": [
+        "Informal",
+        "Empathetic"
+      ],
+      "core_values": "Compassion, health, service",
+      "knowledge_domain": [
+        "Nursing",
+        "Healthcare",
+        "Patient Care"
+      ]
+    },
+    {
+      "name": "Margot Chevalier",
+      "age": "25",
+      "gender": "Female",
+      "location": "Paris, Pigalle",
+      "occupation": "Actress",
+      "income": "€30,000 (variable)",
+      "education": "Drama School",
+      "personality": [
+        "Creative",
+        "Expressive",
+        "Trend-conscious"
+      ],
+      "background": "Needs versatile shoes that can be dressed up or down, depending on auditions and performances.",
+      "interests": [
+        "Acting",
+        "Theater",
+        "Film",
+        "Music"
+      ],
+      "communication_style": [
+        "Informal",
+        "Expressive"
+      ],
+      "core_values": "Creativity, self-expression, authenticity",
+      "knowledge_domain": [
+        "Acting",
+        "Theater",
+        "Film"
+      ]
+    },
+    {
+      "name": "Roxane Lemaire",
+      "age": "40",
+      "gender": "Female",
+      "location": "Paris, 5th arrondissement",
+      "occupation": "Professor of Literature",
+      "income": "€75,000",
+      "education": "PhD in Literature",
+      "personality": [
+        "Analytical",
+        "Intellectual",
+        "Classic"
+      ],
+      "background": "Values quality and timeless style. Prefers comfortable and elegant shoes for teaching and attending academic events.",
+      "interests": [
+        "Literature",
+        "Philosophy",
+        "History",
+        "Classical Music"
+      ],
+      "communication_style": [
+        "Formal",
+        "Eloquent"
+      ],
+      "core_values": "Knowledge, intellect, tradition",
+      "knowledge_domain": [
+        "Literature",
+        "Philosophy",
+        "History"
+      ]
+    },
+    {
+      "name": "Salomé Gerard",
+      "age": "33",
+      "gender": "Female",
+      "location": "Boulogne-Billancourt (suburb of Paris)",
+      "occupation": "Stay-at-home Mother",
+      "income": "N/A (dependent on spouse)",
+      "education": "Bachelor's Degree in Business",
+      "personality": [
+        "Practical",
+        "Friendly",
+        "Organized"
+      ],
+      "background": "Prioritizes comfort and practicality due to her active lifestyle managing children and household. Seeks versatile and durable shoes.",
+      "interests": [
+        "Family activities",
+        "Cooking",
+        "Reading",
+        "Volunteering"
+      ],
+      "communication_style": [
+        "Informal",
+        "Direct"
+      ],
+      "core_values": "Family, comfort, practicality",
+      "knowledge_domain": [
+        "Childcare",
+        "Household Management",
+        "Local Community"
+      ]
+    },
+    {
+      "name": "Leila Traore",
+      "age": "49",
+      "gender": "Female",
+      "location": "Créteil (suburb of Paris)",
+      "occupation": "Social Worker",
+      "income": "€52,000",
+      "education": "Master's Degree in Social Work",
+      "personality": [
+        "Compassionate",
+        "Practical",
+        "Resilient"
+      ],
+      "background": "Needs durable and comfortable shoes for visiting clients and working in various community settings.",
+      "interests": [
+        "Social justice",
+        "Community outreach",
+        "Reading",
+        "Gardening"
+      ],
+      "communication_style": [
+        "Informal",
+        "Empathetic"
+      ],
+      "core_values": "Social justice, equality, compassion",
+      "knowledge_domain": [
+        "Social Work",
+        "Community Development",
+        "Psychology"
+      ]
+    },
+    {
+      "name": "Oceane Moreau",
+      "age": "24",
+      "gender": "Female",
+      "location": "Paris, 18th arrondissement",
+      "occupation": "Student (Fashion Design)",
+      "income": "Part-time job, €15,000",
+      "education": "Currently studying Fashion Design",
+      "personality": [
+        "Creative",
+        "Trend-setting",
+        "Ambitious"
+      ],
+      "background": "Highly interested in fashion and design. Experiments with different styles and seeks inspiration from various sources.",
+      "interests": [
+        "Fashion",
+        "Design",
+        "Art",
+        "Photography"
+      ],
+      "communication_style": [
+        "Informal",
+        "Visual"
+      ],
+      "core_values": "Creativity, innovation, self-expression",
+      "knowledge_domain": [
+        "Fashion Design",
+        "Textiles",
+        "Art History"
+      ]
+    },
+    {
+      "name": "Nathalie Gerard",
+      "age": "55",
+      "gender": "Female",
+      "location": "Paris, 6th arrondissement",
+      "occupation": "Art Gallery Owner",
+      "income": "€120,000",
+      "education": "Master's Degree in Art History",
+      "personality": [
+        "Sophisticated",
+        "Formal",
+        "Discerning"
+      ],
+      "background": "Appreciates high-quality materials and timeless designs. Values comfort, style and excellent craftsmanship.",
+      "interests": [
+        "Art",
+        "Culture",
+        "Travel",
+        "Fine dining"
+      ],
+      "communication_style": [
+        "Formal",
+        "Elegant"
+      ],
+      "core_values": "Quality, artistry, sophistication",
+      "knowledge_domain": [
+        "Art History",
+        "Art Market",
+        "Business Management"
+      ]
+    },
+    {
+      "name": "Sophie Dubois",
+      "age": "42",
+      "gender": "Female",
+      "location": "Paris, 16th arrondissement",
+      "occupation": "Lawyer",
+      "income": "€90,000",
+      "education": "Master's Degree in Law",
+      "personality": [
+        "Analytical",
+        "Formal",
+        "Classic"
+      ],
+      "background": "Sophie is a successful lawyer with a demanding career. She values quality and timeless style.",
+      "interests": [
+        "Classical music",
+        "Art",
+        "Travel",
+        "Ballet"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Quality, Professionalism, Timelessness",
+      "knowledge_domain": [
+        "Law",
+        "Fashion History",
+        "French Culture"
+      ]
+    },
+    {
+      "name": "Chloé Martin",
+      "age": "28",
+      "gender": "Female",
+      "location": "Paris, Le Marais",
+      "occupation": "Marketing Assistant",
+      "income": "€35,000",
+      "education": "Bachelor's Degree in Marketing",
+      "personality": [
+        "Friendly",
+        "Humorous",
+        "Trendy"
+      ],
+      "background": "Chloé is a young marketing professional who enjoys keeping up with the latest trends. She's active on social media.",
+      "interests": [
+        "Fashion blogs",
+        "Social media",
+        "Concerts",
+        "Brunch"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Trendiness, Social Connection, Affordability",
+      "knowledge_domain": [
+        "Social Media Marketing",
+        "Fashion Trends",
+        "Parisian Nightlife"
+      ]
+    },
+    {
+      "name": "Isabelle Leclerc",
+      "age": "37",
+      "gender": "Female",
+      "location": "Paris, 11th arrondissement",
+      "occupation": "Nurse",
+      "income": "€45,000",
+      "education": "Nursing Diploma",
+      "personality": [
+        "Practical",
+        "Reliable",
+        "Caring"
+      ],
+      "background": "Isabelle is a dedicated nurse who spends long hours on her feet. Comfort and practicality are essential for her.",
+      "interests": [
+        "Yoga",
+        "Cooking",
+        "Gardening",
+        "Spending time with family"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Comfort, Practicality, Durability",
+      "knowledge_domain": [
+        "Healthcare",
+        "Basic First Aid",
+        "Comfort Footwear"
+      ]
+    },
+    {
+      "name": "Léa Bernard",
+      "age": "32",
+      "gender": "Female",
+      "location": "Paris, 3rd arrondissement",
+      "occupation": "Graphic Designer",
+      "income": "€60,000",
+      "education": "Master's Degree in Graphic Design",
+      "personality": [
+        "Creative",
+        "Eco-conscious",
+        "Stylish"
+      ],
+      "background": "Léa is a graphic designer who is passionate about sustainability and ethical consumption. She seeks brands that align with her values.",
+      "interests": [
+        "Sustainable fashion",
+        "Environmental activism",
+        "Art",
+        "Photography"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Sustainability, Ethical Production, Style",
+      "knowledge_domain": [
+        "Graphic Design",
+        "Sustainable Materials",
+        "Ethical Fashion Brands"
+      ]
+    },
+    {
+      "name": "Camille Moreau",
+      "age": "48",
+      "gender": "Female",
+      "location": "Neuilly-sur-Seine (suburb)",
+      "occupation": "Finance Manager",
+      "income": "€110,000",
+      "education": "MBA",
+      "personality": [
+        "Formal",
+        "Sophisticated",
+        "Demanding"
+      ],
+      "background": "Camille is a high-powered finance manager with a busy social life. She values luxury and quality.",
+      "interests": [
+        "Fine dining",
+        "Opera",
+        "Luxury travel",
+        "Shopping"
+      ],
+      "communication_style": [
+        "Formal",
+        "Precise"
+      ],
+      "core_values": "Luxury, Quality, Exclusivity",
+      "knowledge_domain": [
+        "Finance",
+        "Luxury Brands",
+        "International Cuisine"
+      ]
+    },
+    {
+      "name": "Manon Roussel",
+      "age": "26",
+      "gender": "Female",
+      "location": "Paris, 10th arrondissement",
+      "occupation": "Freelance Writer",
+      "income": "€30,000",
+      "education": "Bachelor's Degree in Journalism",
+      "personality": [
+        "Creative",
+        "Independent",
+        "Bohemian"
+      ],
+      "background": "Manon is a freelance writer who enjoys expressing her individuality through her style. She's drawn to unique and vintage pieces.",
+      "interests": [
+        "Writing",
+        "Film",
+        "Vintage fashion",
+        "Independent music"
+      ],
+      "communication_style": [
+        "Informal",
+        "Verbose"
+      ],
+      "core_values": "Individuality, Creativity, Authenticity",
+      "knowledge_domain": [
+        "Journalism",
+        "Film History",
+        "Vintage Fashion"
+      ]
+    },
+    {
+      "name": "Audrey Chevalier",
+      "age": "39",
+      "gender": "Female",
+      "location": "Paris, 5th arrondissement",
+      "occupation": "University Professor",
+      "income": "€75,000",
+      "education": "PhD in History",
+      "personality": [
+        "Intellectual",
+        "Formal",
+        "Classic"
+      ],
+      "background": "Audrey is a history professor who values knowledge and tradition. She prefers comfortable yet stylish shoes.",
+      "interests": [
+        "History",
+        "Literature",
+        "Museums",
+        "Travel"
+      ],
+      "communication_style": [
+        "Formal",
+        "Precise"
+      ],
+      "core_values": "Knowledge, Tradition, Comfort",
+      "knowledge_domain": [
+        "History",
+        "Literature",
+        "Art History"
+      ]
+    },
+    {
+      "name": "Margot Lemaire",
+      "age": "29",
+      "gender": "Female",
+      "location": "Boulogne-Billancourt (suburb)",
+      "occupation": "Project Manager",
+      "income": "€55,000",
+      "education": "Master's Degree in Management",
+      "personality": [
+        "Organized",
+        "Practical",
+        "Stylish"
+      ],
+      "background": "Margot is a project manager who needs versatile shoes for work and social events.",
+      "interests": [
+        "Travel",
+        "Fitness",
+        "Cooking",
+        "Socializing"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Versatility, Style, Affordability",
+      "knowledge_domain": [
+        "Project Management",
+        "Current Events",
+        "Fashion Trends"
+      ]
+    },
+    {
+      "name": "Elodie Garnier",
+      "age": "45",
+      "gender": "Female",
+      "location": "Paris, 18th arrondissement",
+      "occupation": "Restaurant Owner",
+      "income": "€65,000",
+      "education": "Culinary Arts Diploma",
+      "personality": [
+        "Warm",
+        "Practical",
+        "Friendly"
+      ],
+      "background": "Elodie owns a popular restaurant and needs comfortable, durable shoes for long days on her feet.",
+      "interests": [
+        "Cooking",
+        "Wine",
+        "Entertaining",
+        "Local Markets"
+      ],
+      "communication_style": [
+        "Informal",
+        "Friendly"
+      ],
+      "core_values": "Comfort, Durability, Community",
+      "knowledge_domain": [
+        "Culinary Arts",
+        "Wine Pairing",
+        "Restaurant Management"
+      ]
+    },
+    {
+      "name": "Justine Roux",
+      "age": "27",
+      "gender": "Female",
+      "location": "Paris, 4th arrondissement",
+      "occupation": "Fashion Blogger",
+      "income": "€40,000",
+      "education": "Bachelor's Degree in Fashion Design",
+      "personality": [
+        "Trendy",
+        "Outgoing",
+        "Influential"
+      ],
+      "background": "Justine is a fashion blogger who is always looking for the next big thing. She loves to experiment with new styles.",
+      "interests": [
+        "Fashion",
+        "Photography",
+        "Travel",
+        "Social Media"
+      ],
+      "communication_style": [
+        "Informal",
+        "Verbose",
+        "Uses slang"
+      ],
+      "core_values": "Trendiness, Style, Social Influence",
+      "knowledge_domain": [
+        "Fashion Design",
+        "Photography",
+        "Social Media Marketing"
+      ]
+    },
+    {
+      "name": "Nadia Benali",
+      "age": "33",
+      "gender": "Female",
+      "location": "Saint-Denis (suburb)",
+      "occupation": "Teacher",
+      "income": "€48,000",
+      "education": "Master's Degree in Education",
+      "personality": [
+        "Practical",
+        "Caring",
+        "Reliable"
+      ],
+      "background": "Nadia is a teacher who needs comfortable and affordable shoes for long days in the classroom.",
+      "interests": [
+        "Reading",
+        "Gardening",
+        "Traveling",
+        "Culture"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Comfort, Affordability, Durability",
+      "knowledge_domain": [
+        "Education",
+        "Child Development",
+        "Multiculturalism"
+      ]
+    },
+    {
+      "name": "Aurelie Lefevre",
+      "age": "52",
+      "gender": "Female",
+      "location": "Versailles (suburb)",
+      "occupation": "Interior Designer",
+      "income": "€80,000",
+      "education": "Diploma in Interior Design",
+      "personality": [
+        "Creative",
+        "Sophisticated",
+        "Demanding"
+      ],
+      "background": "Aurelie is an interior designer who appreciates quality and aesthetics. She seeks shoes that reflect her refined taste.",
+      "interests": [
+        "Art",
+        "Architecture",
+        "Travel",
+        "Design"
+      ],
+      "communication_style": [
+        "Formal",
+        "Precise"
+      ],
+      "core_values": "Quality, Aesthetics, Comfort",
+      "knowledge_domain": [
+        "Interior Design",
+        "Architecture History",
+        "Art History"
+      ]
+    },
+    {
+      "name": "Fatima Diallo",
+      "age": "25",
+      "gender": "Female",
+      "location": "Paris, 19th arrondissement",
+      "occupation": "Student",
+      "income": "€15,000 (part-time)",
+      "education": "Currently studying at University",
+      "personality": [
+        "Trendy",
+        "Energetic",
+        "Social"
+      ],
+      "background": "Fatima is a university student who loves fashion and socialising. She looks for affordable and stylish options.",
+      "interests": [
+        "Fashion",
+        "Music",
+        "Dancing",
+        "Parties"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Affordability, Style, Social Connection",
+      "knowledge_domain": [
+        "Fashion Trends",
+        "Social Media",
+        "Popular Culture"
+      ]
+    },
+    {
+      "name": "Claire Dupont",
+      "age": "40",
+      "gender": "Female",
+      "location": "Paris, 7th arrondissement",
+      "occupation": "Diplomat",
+      "income": "€100,000",
+      "education": "Master's Degree in International Relations",
+      "personality": [
+        "Formal",
+        "Elegant",
+        "Discreet"
+      ],
+      "background": "Claire is a diplomat who needs sophisticated and comfortable shoes for international travel and events.",
+      "interests": [
+        "Politics",
+        "Foreign Affairs",
+        "Travel",
+        "Culture"
+      ],
+      "communication_style": [
+        "Formal",
+        "Precise"
+      ],
+      "core_values": "Professionalism, Diplomacy, Comfort",
+      "knowledge_domain": [
+        "International Relations",
+        "Diplomacy",
+        "Foreign Languages"
+      ]
+    },
+    {
+      "name": "Sofia Rossi",
+      "age": "31",
+      "gender": "Female",
+      "location": "Levallois-Perret (suburb)",
+      "occupation": "HR Manager",
+      "income": "€62,000",
+      "education": "Master's Degree in Human Resources",
+      "personality": [
+        "Friendly",
+        "Organized",
+        "Practical"
+      ],
+      "background": "Sofia is an HR manager who needs versatile shoes for the office and after-work activities.",
+      "interests": [
+        "Fitness",
+        "Travel",
+        "Reading",
+        "Socializing"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Versatility, Comfort, Style",
+      "knowledge_domain": [
+        "Human Resources",
+        "Management",
+        "Communication"
+      ]
+    },
+    {
+      "name": "Mathilde Gerard",
+      "age": "47",
+      "gender": "Female",
+      "location": "Paris, 6th arrondissement",
+      "occupation": "Art Gallery Owner",
+      "income": "€120,000",
+      "education": "Master's Degree in Art History",
+      "personality": [
+        "Sophisticated",
+        "Creative",
+        "Demanding"
+      ],
+      "background": "Mathilde owns an art gallery and appreciates unique and high-quality shoes that reflect her artistic sensibility.",
+      "interests": [
+        "Art",
+        "Travel",
+        "Fashion",
+        "Wine"
+      ],
+      "communication_style": [
+        "Formal",
+        "Verbose"
+      ],
+      "core_values": "Quality, Artistry, Exclusivity",
+      "knowledge_domain": [
+        "Art History",
+        "Contemporary Art",
+        "Luxury Brands"
+      ]
+    },
+    {
+      "name": "Naomi Silva",
+      "age": "29",
+      "gender": "Female",
+      "location": "Paris, 20th arrondissement",
+      "occupation": "Musician",
+      "income": "€28,000",
+      "education": "Music Conservatory Diploma",
+      "personality": [
+        "Creative",
+        "Independent",
+        "Bohemian"
+      ],
+      "background": "Naomi is a musician who expresses her individuality through her style. She looks for unique and comfortable shoes for performing.",
+      "interests": [
+        "Music",
+        "Art",
+        "Fashion",
+        "Travel"
+      ],
+      "communication_style": [
+        "Informal",
+        "Verbose"
+      ],
+      "core_values": "Individuality, Creativity, Comfort",
+      "knowledge_domain": [
+        "Music Theory",
+        "Performance",
+        "Fashion Trends"
+      ]
+    },
+    {
+      "name": "Olivia Moreau",
+      "age": "36",
+      "gender": "Female",
+      "location": "Nanterre (suburb)",
+      "occupation": "Software Engineer",
+      "income": "€70,000",
+      "education": "Master's Degree in Computer Science",
+      "personality": [
+        "Analytical",
+        "Practical",
+        "Efficient"
+      ],
+      "background": "Olivia is a software engineer who prioritizes comfort and practicality in her shoe choices. She needs shoes that can handle her commute and office environment.",
+      "interests": [
+        "Technology",
+        "Gaming",
+        "Travel",
+        "Reading"
+      ],
+      "communication_style": [
+        "Informal",
+        "Concise"
+      ],
+      "core_values": "Comfort, Practicality, Affordability",
+      "knowledge_domain": [
+        "Computer Science",
+        "Software Development",
+        "Technology Trends"
+      ]
+    },
+    {
+      "name": "Sarah Dubois",
+      "age": "26",
+      "gender": "Female",
+      "location": "Paris, 9th arrondissement",
+      "occupation": "Barista",
+      "income": "€22,000",
+      "education": "High School Diploma",
+      "personality": [
+        "Friendly",
+        "Energetic",
+        "Social"
+      ],
+      "background": "Sarah is a barista who needs comfortable and affordable shoes for long shifts on her feet. She also wants to express her personality through her style.",
+      "interests": [
+        "Music",
+        "Fashion",
+        "Art",
+        "Socializing"
+      ],
+      "communication_style": [
+        "Informal",
+        "Uses slang"
+      ],
+      "core_values": "Affordability, Comfort, Style",
+      "knowledge_domain": [
+        "Coffee",
+        "Customer Service",
+        "Fashion Trends"
+      ]
+    },
+    {
+      "name": "Lea Garnier",
+      "age": "50",
+      "gender": "Female",
+      "location": "Saint-Germain-en-Laye (suburb)",
+      "occupation": "Real Estate Agent",
+      "income": "€85,000",
+      "education": "Business School Degree",
+      "personality": [
+        "Driven",
+        "Professional",
+        "Stylish"
+      ],
+      "background": "Lea is a successful real estate agent who needs stylish and comfortable shoes for showing properties to clients.",
+      "interests": [
+        "Real Estate",
+        "Architecture",
+        "Travel",
+        "Dining"
+      ],
+      "communication_style": [
+        "Formal",
+        "Concise"
+      ],
+      "core_values": "Style, Comfort, Professionalism",
+      "knowledge_domain": [
+        "Real Estate",
+        "Architecture",
+        "Interior Design"
+      ]
+    }
+  ],
+  "status": "completed",
+  "progress": 198,
+  "total_personas": 100,
+  "total_steps": 200
+}

@@ -1,0 +1,182 @@
+{% extends "layout.html" %} {% block title %}{% trans %}Research Brief{%
+endtrans %}{% endblock %} {% block content %}
+<div class="container mx-auto px-4 py-8 max-w-4xl">
+    <div class="bg-white rounded-lg shadow-lg p-6">
+        <h1 class="text-3xl font-bold text-gray-900 mb-6">
+            {% trans %}Step 1: Research Brief{% endtrans %}
+        </h1>
+
+        <!-- Brief Generator -->
+        <div class="mb-6">
+            <button
+                id="showBriefGenerator"
+                class="text-blue-600 underline hover:text-blue-800"
+            >
+                {% trans %}Help me generate a brief{% endtrans %}
+            </button>
+
+            <!-- Brief Generator Modal -->
+            <div
+                id="briefGeneratorModal"
+                class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center"
+            >
+                <div class="bg-white rounded-lg p-6 max-w-lg w-full mx-4">
+                    <h2 class="text-2xl font-bold mb-4">
+                        {% trans %}Brief Generator{% endtrans %}
+                    </h2>
+                    <form id="briefGeneratorForm" class="space-y-4">
+                        <div>
+                            <label
+                                class="block text-sm font-medium text-gray-700"
+                            >
+                                {% trans %}Briefly describe your company and
+                                research needs or enter your website URL{%
+                                endtrans %}
+                            </label>
+                            <textarea
+                                id="shortPrompt"
+                                class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                                rows="3"
+                            ></textarea>
+                        </div>
+                        <div class="flex justify-end gap-4">
+                            <button
+                                type="button"
+                                id="closeBriefGenerator"
+                                class="px-4 py-2 text-gray-600 hover:text-gray-800"
+                            >
+                                {% trans %}Cancel{% endtrans %}
+                            </button>
+                            <button
+                                type="submit"
+                                id="generateBriefBtn"
+                                class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700"
+                            >
+                                {% trans %}Generate Brief{% endtrans %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Form -->
+        <form
+            id="briefForm"
+            action="{{ url_for('personas_step') }}"
+            method="POST"
+            enctype="multipart/form-data"
+        >
+            <div class="space-y-6">
+                <div>
+                    <label class="block text-sm font-medium text-gray-700"
+                        >{% trans %}Research Brief:{% endtrans %}</label
+                    >
+                    <textarea
+                        id="brief"
+                        name="brief"
+                        rows="6"
+                        class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                        required
+                    ></textarea>
+                </div>
+
+                <div>
+                    <label class="block text-sm font-medium text-gray-700"
+                        >{% trans %}Comparison Report (Optional):{% endtrans
+                        %}</label
+                    >
+                    <input
+                        type="file"
+                        name="comparison_file"
+                        accept=".pdf"
+                        class="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-blue-50 file:text-blue-700 hover:file:bg-blue-100"
+                    />
+                </div>
+
+                <div class="flex justify-end">
+                    <button
+                        type="submit"
+                        id="generatePersonasBtn"
+                        class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+                    >
+                        {% trans %}Generate Personas{% endtrans %} →
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    document
+        .getElementById("showBriefGenerator")
+        .addEventListener("click", () => {
+            document
+                .getElementById("briefGeneratorModal")
+                .classList.remove("hidden");
+        });
+
+    document
+        .getElementById("closeBriefGenerator")
+        .addEventListener("click", () => {
+            document
+                .getElementById("briefGeneratorModal")
+                .classList.add("hidden");
+        });
+
+    document
+        .getElementById("briefGeneratorForm")
+        .addEventListener("submit", async (e) => {
+            e.preventDefault();
+            const submitBtn = document.getElementById("generateBriefBtn");
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+    {{ _('Generating Brief...') }}
+  `;
+
+            try {
+                const response = await fetch("/generate-brief", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        prompt: document.getElementById("shortPrompt").value,
+                    }),
+                });
+
+                const data = await response.json();
+                document.getElementById("brief").value = data.brief;
+                document
+                    .getElementById("briefGeneratorModal")
+                    .classList.add("hidden");
+            } catch (error) {
+                console.error("Error:", error);
+                alert("{{ _('Failed to generate brief. Please try again.') }}");
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.textContent = "{{ _('Generate Brief') }}";
+            }
+        });
+
+    // Add form submission handler for the main form
+    document
+        .getElementById("briefForm")
+        .addEventListener("submit", function (e) {
+            const submitBtn = document.getElementById("generatePersonasBtn");
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = `
+    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+    {{ _('Generating Personas...') }}
+  `;
+        });
+</script>
+{% endblock %}

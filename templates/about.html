@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}{% trans %}About Synlabs{% endtrans %}{% endblock %}
+
+{% block content %}
+
+  <!-- Hero Section -->
+  <section class="bg-blue-600 text-white text-center py-20">
+    <div class="container mx-auto px-6">
+      <h1 class="text-5xl font-extrabold">{% trans %}Unlock the Future of Business Insights{% endtrans %}</h1>
+      <p class="mt-4 text-lg">{% trans %}Where AI meets strategic innovation{% endtrans %}</p>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-12 container mx-auto px-6">
+    <div class="max-w-4xl mx-auto bg-white shadow-md rounded-lg p-6">
+      <p class="mb-6 text-xl">
+        {% trans %}Synlabs is an internal tool developed by Google Turkey, powered by Gemini 2.0. It streamlines the process of transforming strategic briefs and reports into structured, actionable insights.{% endtrans %}
+      </p>
+      <p class="mb-6 text-xl">
+        {% trans %}By leveraging Gemini 2.0, the platform generates dynamic personas from your brief, offering diverse market perspectives for deeper analysis. These AI-driven personas engage with your reports, identifying key opportunities and aiding in strategic planning.{% endtrans %}
+      </p>
+      <p class="mb-6 text-xl">
+        {% trans %}The tool compares curated insights with existing reports, ensuring a comprehensive, multi-angle analysis that enhances decision-making.{% endtrans %}
+      </p>
+      <p class="mb-6 text-xl">
+        {% trans %}Built with Gemini 2.0, Synlabs demonstrates how easily AI can be used to develop powerful tools for business intelligence.{% endtrans %}
+      </p>
+      <p class="mb-6 text-xl">
+        {% trans %}For any questions, please contact us at{% endtrans %} <a href="mailto:ilayda@google.com">ilayda@google.com</a>
+      </p>
+    </div>
+  </main>
+
+{% endblock %}

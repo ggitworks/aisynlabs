@@ -1,0 +1,436 @@
+# French translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-02-15 22:32+0300\n"
+"PO-Revision-Date: 2025-02-14 19:29+0300\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: fr <LL@li.org>\n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: templates/about.html:3
+msgid "About Synlabs"
+msgstr "À propos de Synlabs"
+
+#: templates/about.html:10
+msgid "Unlock the Future of Business Insights"
+msgstr "Débloquez l'avenir des informations commerciales"
+
+#: templates/about.html:11
+msgid "Where AI meets strategic innovation"
+msgstr "Là où l'IA rencontre l'innovation stratégique"
+
+#: templates/about.html:19
+msgid ""
+"Synlabs is an internal tool developed by Google Turkey, powered by Gemini "
+"2.0. It streamlines the process of transforming strategic briefs and reports"
+" into structured, actionable insights."
+msgstr ""
+"Synlabs est un outil interne développé par Google Turquie, alimenté par "
+"Gemini 2.0. Il rationalise le processus de transformation des notes "
+"d'orientation stratégiques et des rapports en informations structurées et "
+"exploitables."
+
+#: templates/about.html:22
+msgid ""
+"By leveraging Gemini 2.0, the platform generates dynamic personas from your "
+"brief, offering diverse market perspectives for deeper analysis. These AI-"
+"driven personas engage with your reports, identifying key opportunities and "
+"aiding in strategic planning."
+msgstr ""
+"En exploitant Gemini 2.0, la plateforme génère des personas dynamiques à "
+"partir de votre brief, offrant diverses perspectives de marché pour une "
+"analyse plus approfondie. Ces personas basés sur l'IA interagissent avec vos"
+" rapports, identifiant les opportunités clés et facilitant la planification "
+"stratégique."
+
+#: templates/about.html:25
+msgid ""
+"The tool compares curated insights with existing reports, ensuring a "
+"comprehensive, multi-angle analysis that enhances decision-making."
+msgstr ""
+"L'outil compare des informations sélectionnées avec des rapports existants, "
+"assurant une analyse complète et multi-angle qui améliore la prise de "
+"décision."
+
+#: templates/about.html:28
+msgid ""
+"Built with Gemini 2.0, Synlabs demonstrates how easily AI can be used to "
+"develop powerful tools for business intelligence."
+msgstr ""
+"Construit avec Gemini 2.0, Synlabs démontre avec quelle facilité l'IA peut "
+"être utilisée pour développer des outils puissants pour l'intelligence "
+"d'affaires."
+
+#: templates/about.html:31
+msgid "For any questions, please contact us at"
+msgstr "Pour toute question, veuillez nous contacter à"
+
+#: templates/async_results.html:3
+msgid "Processing Results"
+msgstr "Traitement des résultats"
+
+#: templates/async_results.html:20
+msgid "Report Generation in Progress"
+msgstr "Génération du rapport en cours"
+
+#: templates/async_results.html:31
+msgid "Initializing..."
+msgstr "Initialisation..."
+
+#: templates/async_results.html:36 templates/personas_step.html:3
+#: templates/submission_view.html:53 templates/submission_view.html:197
+msgid "Personas"
+msgstr "Personnalités"
+
+#: templates/async_results.html:43 templates/submission_view.html:77
+#: templates/submission_view.html:306
+msgid "Dialog"
+msgstr "Dialogue"
+
+#: templates/async_results.html:49
+msgid "Research Sections"
+msgstr "Sections de recherche"
+
+#: templates/async_results.html:55 templates/submission_view.html:101
+#: templates/submission_view.html:260
+msgid "Research Report"
+msgstr "Rapport de recherche"
+
+#: templates/async_results.html:61
+msgid "Final Comparative Report"
+msgstr "Rapport comparatif final"
+
+#: templates/async_results.html:78
+msgid "File uploaded"
+msgstr "Fichier téléchargé"
+
+#: templates/async_results.html:82
+msgid "Creating personas"
+msgstr "Création de personas"
+
+#: templates/async_results.html:86
+msgid "Starting focus group simulation"
+msgstr "Démarrage de la simulation de groupe de discussion"
+
+#: templates/async_results.html:90
+msgid "Moderating discussion, may take a few minutes"
+msgstr "La modération de la discussion peut prendre quelques minutes."
+
+#: templates/async_results.html:94
+msgid "Focus group discussion completed"
+msgstr "Discussion de groupe terminée."
+
+#: templates/async_results.html:98
+msgid "Generating research report"
+msgstr "Génération d'un rapport de recherche"
+
+#: templates/async_results.html:106
+msgid "Research report section:"
+msgstr "Section du rapport de recherche :"
+
+#: templates/async_results.html:106
+msgid "completed"
+msgstr "Terminé"
+
+#: templates/async_results.html:110
+msgid "Finalizing research report"
+msgstr "Finalisation du rapport de recherche"
+
+#: templates/async_results.html:114 templates/async_results.html:126
+msgid "Process completed"
+msgstr "Processus terminé"
+
+#: templates/async_results.html:118
+msgid "Redirecting"
+msgstr "Redirection..."
+
+#: templates/async_results.html:151 templates/personas_step.html:18
+#: templates/personas_step.html:154 templates/submission_view.html:222
+msgid "Personality:"
+msgstr "Personnalité :"
+
+#: templates/async_results.html:152 templates/personas_step.html:22
+#: templates/personas_step.html:159 templates/submission_view.html:226
+msgid "Background:"
+msgstr "Contexte :"
+
+#: templates/async_results.html:153 templates/personas_step.html:42
+#: templates/personas_step.html:184 templates/submission_view.html:230
+msgid "Interests:"
+msgstr "Intérêts :"
+
+#: templates/async_results.html:154 templates/personas_step.html:46
+#: templates/personas_step.html:189 templates/submission_view.html:235
+msgid "Communication Style:"
+msgstr "Style de communication :"
+
+#: templates/async_results.html:155 templates/personas_step.html:50
+#: templates/personas_step.html:194 templates/submission_view.html:241
+msgid "Core Values:"
+msgstr "Valeurs fondamentales :"
+
+#: templates/async_results.html:156 templates/personas_step.html:54
+#: templates/personas_step.html:199 templates/submission_view.html:246
+msgid "Knowledge Domain:"
+msgstr "Domaine de connaissances :"
+
+#: templates/brief_step.html:3
+msgid "Research Brief"
+msgstr "Note de recherche"
+
+#: templates/brief_step.html:8
+msgid "Step 1: Research Brief"
+msgstr "Étape 1 : Note d'information sur la recherche"
+
+#: templates/brief_step.html:14
+msgid "Help me generate a brief"
+msgstr "Aidez-moi à générer un brief."
+
+#: templates/brief_step.html:20
+msgid "Brief Generator"
+msgstr "Générateur de briefs"
+
+#: templates/brief_step.html:24
+msgid "Briefly describe your company and research needs:"
+msgstr "Décrivez brièvement votre entreprise et vos besoins en recherche :"
+
+#: templates/brief_step.html:30
+msgid "Cancel"
+msgstr "Annuler"
+
+#: templates/brief_step.html:33 templates/brief_step.html:106
+msgid "Generate Brief"
+msgstr "Générer un brief."
+
+#: templates/brief_step.html:45
+msgid "Research Brief:"
+msgstr "Note de recherche :"
+
+#: templates/brief_step.html:52
+msgid "Comparison Report (Optional):"
+msgstr "Rapport comparatif (facultatif) :"
+
+#: templates/brief_step.html:60
+msgid "Generate Personas"
+msgstr "Générer des Personas →"
+
+#: templates/brief_step.html:86
+msgid "Generating Brief..."
+msgstr "Génération d'un brief..."
+
+#: templates/brief_step.html:103
+msgid "Failed to generate brief. Please try again."
+msgstr "Échec de la génération du résumé. Veuillez réessayer."
+
+#: templates/brief_step.html:119
+msgid "Generating Personas..."
+msgstr "Génération de Personas..."
+
+#: templates/navigation.html:6
+msgid "Google TR | Synlabs"
+msgstr "Google TR | Synlabs"
+
+#: templates/navigation.html:21 templates/navigation.html:51
+msgid "About"
+msgstr "À propos"
+
+#: templates/navigation.html:29 templates/navigation.html:60
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: templates/navigation.html:33 templates/navigation.html:64
+msgid "Logged in as:"
+msgstr "Connecté en tant que :"
+
+#: templates/navigation.html:38 templates/navigation.html:69
+msgid "Login with Google"
+msgstr "Se connecter avec Google"
+
+#: templates/partial_compare.html:11
+msgid "Validation Confidence"
+msgstr "Confiance de validation"
+
+#: templates/partial_compare.html:24
+msgid "Validate your research"
+msgstr "Commencer la recherche"
+
+#: templates/partial_compare.html:27
+msgid "Upload a research report to validate your research."
+msgstr "Téléversez un rapport de recherche pour valider votre recherche."
+
+#: templates/partial_compare.html:49
+msgid "Upload"
+msgstr "Fichier téléchargé"
+
+#: templates/partial_compare.html:142
+msgid "Comparing, may take a few minutes ..."
+msgstr "La modération de la discussion peut prendre quelques minutes."
+
+#: templates/partial_compare.html:154 templates/submission_view.html:151
+msgid "Validation"
+msgstr "Éducation :"
+
+#: templates/partial_compare.html:160
+msgid "New"
+msgstr "Nouveau"
+
+#: templates/personas_step.html:8
+msgid "Step 2: Personas"
+msgstr "Étape 2 : Personas"
+
+#: templates/personas_step.html:26 templates/personas_step.html:164
+#: templates/submission_view.html:214
+msgid "Income:"
+msgstr "Revenu:"
+
+#: templates/personas_step.html:30 templates/personas_step.html:169
+#: templates/submission_view.html:206
+msgid "Age:"
+msgstr "Âge :"
+
+#: templates/personas_step.html:34 templates/personas_step.html:174
+#: templates/submission_view.html:218
+msgid "Education:"
+msgstr "Éducation :"
+
+#: templates/personas_step.html:38 templates/personas_step.html:179
+#: templates/submission_view.html:210
+msgid "Gender:"
+msgstr "Genre :"
+
+#: templates/personas_step.html:66
+msgid "+ Add Another Persona"
+msgstr "+ Ajouter une autre personnalité"
+
+#: templates/personas_step.html:69
+msgid "+ Add AI Generated Persona"
+msgstr "+ Ajouter une Personnalité Générée par IA"
+
+#: templates/personas_step.html:80
+msgid "Continue with"
+msgstr "Continuer avec"
+
+#: templates/personas_step.html:80
+msgid "Personas →"
+msgstr "Personas → Personnages types"
+
+#: templates/personas_step.html:129
+msgid "New Persona"
+msgstr "Nouvelle Personnalité"
+
+#: templates/personas_step.html:130
+msgid "Friendly"
+msgstr "Amical"
+
+#: templates/personas_step.html:130
+msgid "Professional"
+msgstr "Professionnel"
+
+#: templates/personas_step.html:131
+msgid "Enter background here..."
+msgstr "Entrez l'arrière-plan ici..."
+
+#: templates/personas_step.html:136
+msgid "Technology"
+msgstr "Technologie"
+
+#: templates/personas_step.html:136
+msgid "Research"
+msgstr "Recherche"
+
+#: templates/personas_step.html:137
+msgid "Formal"
+msgstr "Formel"
+
+#: templates/personas_step.html:137
+msgid "Clear"
+msgstr "Clair"
+
+#: templates/personas_step.html:138
+msgid "Enter core values..."
+msgstr "Saisir les valeurs fondamentales..."
+
+#: templates/personas_step.html:139
+msgid "General Knowledge"
+msgstr "Culture générale"
+
+#: templates/personas_step.html:216 templates/personas_step.html:275
+msgid "You must have at least one persona!"
+msgstr "Vous devez avoir au moins une personnalité !"
+
+#: templates/personas_step.html:238
+msgid "Generating Persona..."
+msgstr "Génération de persona..."
+
+#: templates/personas_step.html:262
+msgid "Failed to generate new persona. Please try again."
+msgstr "Échec de la génération d'un nouveau personnage. Veuillez réessayer."
+
+#: templates/start.html:3
+msgid "Start Research"
+msgstr "Commencer la recherche"
+
+#: templates/start.html:8
+msgid "AI-Powered Research Assistant"
+msgstr "Assistant de recherche alimenté par l'IA"
+
+#: templates/start.html:9
+msgid ""
+"Generate valuable insights using synthetic focus groups and AI analysis"
+msgstr ""
+"Générer des informations précieuses grâce à des groupes de discussion "
+"synthétiques et à l'analyse par IA."
+
+#: templates/start.html:13
+msgid "START"
+msgstr "DÉMARRER"
+
+#: templates/submission_view.html:1
+msgid "Submission Details"
+msgstr "Détails de la soumission"
+
+#: templates/submission_view.html:30 templates/submission_view.html:187
+msgid "Brief"
+msgstr "Bref"
+
+#: templates/submission_view.html:126 templates/submission_view.html:319
+msgid "Final Report"
+msgstr "Rapport final"
+
+#: templates/submission_view.html:175 templates/submission_view.html:337
+msgid "Chat with Participants"
+msgstr "Discuter avec les participants"
+
+#: templates/submission_view.html:266
+msgid "Table of Contents"
+msgstr "Table des matières"
+
+#: templates/submission_view.html:368
+msgid "Download PDF Report"
+msgstr "Télécharger le rapport PDF"
+
+#~ msgid "Creating personas - 15%"
+#~ msgstr "Création de personas - 15 %"
+
+#~ msgid "Moderating discussion - may take a few minutes - 20%"
+#~ msgstr "Modération de la discussion - peut prendre quelques minutes - 20 %"
+
+#~ msgid "Create AI Personas"
+#~ msgstr "Créer des Personas IA"
+
+#~ msgid "×"
+#~ msgstr "×"
+
+#~ msgid "Synthetic Insights Report"
+#~ msgstr "Rapport sur les perspectives synthétiques"

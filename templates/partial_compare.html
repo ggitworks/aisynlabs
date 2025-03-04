@@ -1,0 +1,383 @@
+<!-- Compare Section -->
+
+<!-- Container for your gauge -->
+
+<div class="bg-white shadow-md rounded-lg p-6 mb-8">
+    <!-- Scores Header -->
+    <div id="scores-header" class="hidden mb-6">
+        <div class="grid grid-cols-3 gap-4 p-4 bg-gray-100 rounded-lg">
+            <div class="text-center">
+                <div class="text-sm text-gray-600">
+                    {% trans %}Validation Confidence{% endtrans %}
+                </div>
+                <div
+                    id="report1-score"
+                    class="text-xl font-bold text-blue-600"
+                ></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Compare Form -->
+    <div id="compare-form">
+        <h2 class="text-2xl font-bold mb-4">
+            {% trans %}Validate your research{% endtrans %}
+        </h2>
+        <p>
+            {% trans %}Upload a research report to validate your research.{%
+            endtrans %}
+        </p>
+        <form
+            method="POST"
+            enctype="multipart/form-data"
+            data-url="{{ url_for('compare_reports_async') }}"
+        >
+            <input
+                type="file"
+                name="report"
+                accept=".pdf,.docx,.doc,.txt,.csv,.xlsx,.xls"
+            />
+            <input
+                type="hidden"
+                name="submission_id"
+                value="{{ submission_data.id }}"
+            />
+            <button
+                id="compare-button"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+                {% trans %}Validate{% endtrans %}
+            </button>
+        </form>
+    </div>
+
+    <!-- Spinner / Battery Indicator -->
+    <div id="spinner-bar" class="hidden">
+        <div class="flex flex-col items-center justify-center my-8">
+            <!-- Battery indicator container with 20 segments -->
+            <div id="battery-indicator" class="flex space-x-1 mb-4">
+                <!-- 20 segments -->
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+                <div
+                    class="battery-segment"
+                    style="width: 10px; height: 30px; background-color: #ccc"
+                ></div>
+            </div>
+            <div id="spinner-text" class="text-center text-gray-600">
+                {% trans %}Comparing, may take a few minutes ...{% endtrans %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Compare Results -->
+    <div
+        class="bg-white shadow-md rounded-lg p-6 mb-8"
+        id="compare-results-container"
+    >
+        <div class="flex justify-between items-center mb-4">
+            <h2 class="text-2xl font-bold">
+                {% trans %}Validation{% endtrans %}
+            </h2>
+            <button
+                onclick="showCompareForm()"
+                class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
+            >
+                {% trans %}New{% endtrans %}
+            </button>
+        </div>
+        <div id="compare-results"></div>
+    </div>
+</div>
+
+<script>
+    // Map each step to a progress percentage
+    const progressMap = {
+        validation: 20,
+        preparing: 40,
+        uploaded: 60,
+        validating: 80,
+        done: 100,
+    };
+
+    // Update battery indicator: fill segments based on progress (20 segments total)
+    function updateBattery(progress) {
+        const batteryIndicator = document.getElementById("battery-indicator");
+        const segments =
+            batteryIndicator.getElementsByClassName("battery-segment");
+        const totalSegments = segments.length;
+        const filledSegments = Math.round((progress / 100) * totalSegments);
+        console.log(
+            `Updating battery: progress ${progress}% (${filledSegments} segments filled)`,
+        );
+        for (let i = 0; i < totalSegments; i++) {
+            segments[i].style.backgroundColor =
+                i < filledSegments ? "green" : "#ccc";
+        }
+    }
+
+    // Send the form data to the server and process the streamed response
+    function compareReports(e) {
+        e.preventDefault();
+        console.log("compareReports triggered");
+        const form = document.querySelector("form");
+        const formData = new FormData(form);
+        const url = form.getAttribute("data-url");
+        const compareResultsDiv = document.getElementById("compare-results");
+
+        // Show spinner/battery indicator and hide form
+        document.getElementById("compare-form").classList.add("hidden");
+        document.getElementById("spinner-bar").classList.remove("hidden");
+
+        fetch(url, {
+            method: "POST",
+            body: formData,
+        })
+            .then((response) => {
+                console.log("Fetch response received");
+                const reader = response.body.getReader();
+                const decoder = new TextDecoder();
+                let buffer = "";
+
+                function read() {
+                    reader
+                        .read()
+                        .then(({ done, value }) => {
+                            if (done) {
+                                console.log("Stream reading completed");
+                                document
+                                    .getElementById("spinner-bar")
+                                    .classList.add("hidden");
+                                return;
+                            }
+                            const chunk = decoder.decode(value, {
+                                stream: true,
+                            });
+                            console.log("Received chunk:", chunk);
+                            buffer += chunk;
+                            const lines = buffer.split("\n");
+                            // Process all complete lines
+                            lines.slice(0, -1).forEach((line) => {
+                                console.log("Processing line:", line);
+                                processLine(line);
+                            });
+                            buffer = lines[lines.length - 1];
+                            read();
+                        })
+                        .catch((error) => {
+                            console.error("Error reading from stream:", error);
+                        });
+                }
+                read();
+            })
+            .catch((error) => {
+                console.error("Error during fetch:", error);
+                compareResultsDiv.innerHTML =
+                    "An error occurred during comparison.";
+                document.getElementById("spinner-bar").classList.add("hidden");
+                document
+                    .getElementById("compare-form")
+                    .classList.remove("hidden");
+            });
+    }
+
+    function processLine(line) {
+        if (!line.trim()) return;
+        // Remove the "data:" prefix if present
+        if (line.startsWith("data:")) {
+            line = line.replace(/^data:\s*/, "");
+        }
+        console.log("Raw JSON line:", line);
+        try {
+            const data = JSON.parse(line);
+            console.log("Parsed data:", data);
+
+            if (data.step && progressMap.hasOwnProperty(data.step)) {
+                const progress = progressMap[data.step];
+                updateBattery(progress);
+                document.getElementById("spinner-text").innerText =
+                    `${progress}% - ${data.message}`;
+            }
+
+            if (data.step === "done") {
+                document.getElementById("compare-results").innerHTML =
+                    data.final_report;
+                document
+                    .getElementById("compare-results-container")
+                    .classList.remove("hidden");
+                document.getElementById("spinner-bar").classList.add("hidden");
+
+                // Update scores header
+                if (
+                    data.scores &&
+                    data.scores.report1_confidence !== undefined &&
+                    data.scores.report2_confidence !== undefined
+                ) {
+                    const report1Score = data.scores.report1_confidence;
+                    const report2Score = data.scores.report2_confidence;
+                    const ratio = (report1Score / report2Score) * 100; // Convert to percentage
+
+                    if (ratio > 100) {
+                        ratio = 100;
+                    }
+
+                    // Display scores
+                    document.getElementById("report1-score").textContent =
+                        `${ratio.toFixed(2)}%`;
+
+                    // Show the scores header
+                    document
+                        .getElementById("scores-header")
+                        .classList.remove("hidden");
+                }
+            } else if (data.step === "error") {
+                document.getElementById("compare-results").innerHTML =
+                    `<p>Error: ${data.message}</p>`;
+                document
+                    .getElementById("compare-form")
+                    .classList.remove("hidden");
+                document.getElementById("spinner-bar").classList.add("hidden");
+            }
+        } catch (err) {
+            console.error("Error parsing JSON:", line, err);
+        }
+    }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const formButton = document.getElementById("compare-button");
+        formButton.addEventListener("click", compareReports);
+        document
+            .getElementById("compare-results-container")
+            .classList.add("hidden");
+    });
+
+    function showCompareForm() {
+        document.getElementById("compare-form").classList.remove("hidden");
+        document.getElementById("compare-results").innerHTML = "";
+        document
+            .getElementById("compare-results-container")
+            .classList.add("hidden");
+    }
+</script>
+
+<style>
+    /* Overall table styling */
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    /* Table header styling */
+    table thead {
+        background-color: #4caf50;
+        color: #fff;
+    }
+
+    table thead th {
+        padding: 12px 15px;
+        font-size: 16px;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+    }
+
+    /* Table body styling */
+    table tbody td {
+        padding: 12px 15px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    /* Zebra-striping for rows */
+    table tbody tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+
+    /* Hover effect for rows */
+    table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+    /* Optional: Rounded corners for the table */
+    table {
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+</style>

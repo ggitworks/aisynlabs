@@ -1,0 +1,403 @@
+{% extends "layout.html" %} {% block title %}{% trans %}Submission Details{%
+endtrans %}{% endblock %} {% block content %}
+
+<div class="container mx-auto px-0 py-12">
+    <h1 class="text-lg font-bold mb-6">{{ submission_data.title }}</h1>
+</div>
+
+<!-- Tab Navigation -->
+<div class="mb-6 overflow-x-auto">
+    <div class="flex border-b min-w-max">
+        <!-- Brief Tab -->
+        <button
+            id="tab-brief"
+            class="tab-button whitespace-nowrap py-2 px-4 text-lg font-semibold text-blue-600 focus:outline-none hover:text-blue-800 flex items-center gap-2"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+            </svg>
+            <span class="hidden md:inline">{% trans %}Brief{% endtrans %}</span>
+        </button>
+
+        <!-- Personas Tab -->
+        <button
+            id="tab-personas"
+            class="tab-button whitespace-nowrap py-2 px-4 text-lg font-semibold text-blue-600 focus:outline-none hover:text-blue-800 flex items-center gap-2"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"
+                />
+            </svg>
+            <span class="hidden md:inline"
+                >{% trans %}Personas{% endtrans %}</span
+            >
+        </button>
+
+        <!-- Dialog Tab -->
+        <button
+            id="tab-dialog"
+            class="tab-button whitespace-nowrap py-2 px-4 text-lg font-semibold text-blue-600 focus:outline-none hover:text-blue-800 flex items-center gap-2"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                />
+            </svg>
+            <span class="hidden md:inline"
+                >{% trans %}Dialog{% endtrans %}</span
+            >
+        </button>
+
+        <!-- Research Report Tab -->
+        <button
+            id="tab-research"
+            class="tab-button whitespace-nowrap py-2 px-4 text-lg font-semibold text-blue-600 focus:outline-none hover:text-blue-800 flex items-center gap-2"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 01-2 2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+            </svg>
+            <span class="hidden md:inline"
+                >{% trans %}Research Report{% endtrans %}</span
+            >
+        </button>
+
+        {% if submission_data.get('final_report') %}
+        <!-- Final Report Tab -->
+        <button
+            id="tab-final-report"
+            class="tab-button whitespace-nowrap py-2 px-4 text-lg font-semibold text-blue-600 focus:outline-none hover:text-blue-800 flex items-center gap-2"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
+                />
+            </svg>
+            <span class="hidden md:inline"
+                >{% trans %}Final Report{% endtrans %}</span
+            >
+        </button>
+        {% endif %}
+
+        <!-- Compare Tab -->
+        <button
+            id="tab-compare"
+            class="tab-button whitespace-nowrap py-2 px-4 text-lg font-semibold text-blue-600 focus:outline-none hover:text-blue-800 flex items-center gap-2"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+                />
+            </svg>
+            <span class="hidden md:inline"
+                >{% trans %}Validation{% endtrans %}</span
+            >
+        </button>
+
+        <!-- Chat Tab -->
+        <button
+            id="tab-chat"
+            class="tab-button whitespace-nowrap py-2 px-4 text-lg font-semibold text-blue-600 focus:outline-none hover:text-blue-800 bg-green-50 flex items-center gap-2"
+        >
+            <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+            >
+                <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+            </svg>
+            <span class="hidden md:inline"
+                >{% trans %}Chat with Participants{% endtrans %}</span
+            >
+        </button>
+    </div>
+</div>
+
+<!-- Tab Content -->
+<div class="tab-content">
+    <!-- Brief Section -->
+    <div id="brief-content" class="tab-panel hidden">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">
+                {% trans %}Brief{% endtrans %}
+            </h2>
+            <p class="text-gray-700">{{ submission_data.brief|safe }}</p>
+        </div>
+    </div>
+
+    <!-- Personas Section -->
+    <div id="personas-content" class="tab-panel hidden">
+        <div class="mb-8">
+            <h2 class="text-2xl font-bold mb-4">
+                {% trans %}Personas{% endtrans %}
+            </h2>
+            <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                {% for persona in submission_data.personas %}
+                <div class="bg-white shadow-lg rounded-lg p-6">
+                    <h3 class="text-2xl font-bold text-blue-600">
+                        {{ persona.name }}
+                    </h3>
+                    <p class="mt-2 text-gray-700">
+                        <strong>{% trans %}Age:{% endtrans %}</strong> {{
+                        persona.age }}
+                    </p>
+                    <p class="mt-2 text-gray-700">
+                        <strong>{% trans %}Gender:{% endtrans %}</strong> {{
+                        persona.gender }}
+                    </p>
+                    <p class="mt-2 text-gray-700">
+                        <strong>{% trans %}Income:{% endtrans %}</strong> {{
+                        persona.income }}
+                    </p>
+                    <p class="mt-2 text-gray-700">
+                        <strong>{% trans %}Education:{% endtrans %}</strong> {{
+                        persona.education }}
+                    </p>
+                    <p class="mt-2 text-gray-700">
+                        <strong>{% trans %}Personality:{% endtrans %}</strong>
+                        {{ ", ".join(persona.personality) }}
+                    </p>
+                    <p class="mt-2 text-gray-700">
+                        <strong>{% trans %}Background:{% endtrans %}</strong> {{
+                        persona.background }}
+                    </p>
+                    <p class="mt-2 text-gray-700">
+                        <strong>{% trans %}Interests:{% endtrans %}</strong> {{
+                        ", ".join(persona.interests) }}
+                    </p>
+                    <p class="mt-2 text-gray-700">
+                        <strong
+                            >{% trans %}Communication Style:{% endtrans
+                            %}</strong
+                        >
+                        {{ ", ".join(persona.communication_style) }}
+                    </p>
+                    <p class="mt-2 text-gray-700">
+                        <strong>{% trans %}Core Values:{% endtrans %}</strong>
+                        {{ persona.core_values }}
+                    </p>
+                    <p class="mt-2 text-gray-700">
+                        <strong
+                            >{% trans %}Knowledge Domain:{% endtrans %}</strong
+                        >
+                        {{ ", ".join(persona.knowledge_domain) }}
+                    </p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Research Report Section -->
+    <div id="research-content" class="tab-panel hidden">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">
+                {% trans %}Research Report{% endtrans %}
+            </h2>
+
+            <!-- Table of Contents -->
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold mb-2">
+                    {% trans %}Table of Contents{% endtrans %}
+                </h3>
+                <ul class="pl-6">
+                    {% for title, content in
+                    submission_data.research_sections.items() %}
+                    <li>
+                        <a
+                            href="#section-{{ loop.index }}"
+                            class="text-blue-500 hover:underline"
+                            >{{ title }}</a
+                        >
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <!-- Sections -->
+            {% for title, content in submission_data.research_sections.items()
+            %}
+            <div
+                class="bg-gray-100 border border-gray-200 rounded-lg mb-4"
+                id="section-{{ loop.index }}"
+            >
+                <div class="bg-gray-200 px-4 py-2 rounded-t-lg">
+                    <h5 class="text-lg font-semibold text-gray-700">
+                        {{ title }}
+                    </h5>
+                </div>
+                <div class="p-4">
+                    <p class="text-gray-700">{{ content|safe }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Dialog Section -->
+    <div id="dialog-content" class="tab-panel hidden">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">
+                {% trans %}Dialog{% endtrans %}
+            </h2>
+            <pre class="whitespace-pre-wrap text-gray-700">
+{{ submission_data.dialog|safe }}</pre
+            >
+        </div>
+    </div>
+
+    <!-- Final Report Section -->
+    {% if submission_data.get('final_report') %}
+    <div id="final-report-content" class="tab-panel hidden">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">
+                {% trans %}Final Report{% endtrans %}
+            </h2>
+            <pre class="whitespace-pre-wrap text-gray-700">
+{{ submission_data.final_report|safe }}</pre
+            >
+        </div>
+    </div>
+    {% endif %}
+
+    <!-- Compare Section -->
+    <div id="compare-content" class="tab-panel hidden">
+        {% include 'partial_compare.html' %}
+    </div>
+
+    <!-- Chat Panel -->
+    <div id="chat-content" class="tab-panel hidden">
+        <div class="bg-white shadow-md rounded-lg p-6 mb-8">
+            <h2 class="text-2xl font-bold mb-4">
+                {% trans %}Chat with Participants{% endtrans %}
+            </h2>
+            <script>
+                // Make personas and dialog available to the chat module
+                const personas = {{ submission_data.personas|tojson|safe }};
+                const dialogContent = {{ submission_data.dialog|tojson|safe }};
+            </script>
+            {% include 'chat_module.html' %}
+        </div>
+    </div>
+</div>
+
+<!-- Fixed PDF Download Button -->
+<div class="fixed bottom-8 right-8">
+    <a
+        href="{{ url_for('download_pdf', submission_id=submission_data.id) }}"
+        class="flex items-center gap-2 bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg hover:bg-blue-700 transition-colors"
+    >
+        <svg
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+        >
+            <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 01-2 2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
+            />
+        </svg>
+        {% trans %}Download PDF Report{% endtrans %}
+    </a>
+</div>
+{% endblock %} {% block scripts %}
+<script>
+    // Handle tab switching
+    const tabs = document.querySelectorAll(".tab-button");
+    const tabPanels = document.querySelectorAll(".tab-panel");
+
+    tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+            // Hide all tab panels
+            tabPanels.forEach((panel) => panel.classList.add("hidden"));
+
+            // Remove active style from all tabs
+            tabs.forEach((t) =>
+                t.classList.remove(
+                    "border-b-2",
+                    "border-blue-600",
+                    "text-blue-800",
+                ),
+            );
+
+            // Show the clicked tab's panel
+            const panelId = tab.id.replace("tab-", "") + "-content";
+            document.getElementById(panelId).classList.remove("hidden");
+
+            // Add active style to clicked tab
+            tab.classList.add("border-b-2", "border-blue-600", "text-blue-800");
+        });
+    });
+
+    // Set default tab to be shown
+    document.getElementById("tab-brief").click();
+</script>
+{% endblock %}

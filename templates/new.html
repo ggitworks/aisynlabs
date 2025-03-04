@@ -1,0 +1,162 @@
+{% extends "layout.html" %}
+
+{% block title %}Submission Details{% endblock %}
+
+{% block content %}
+
+
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    main {
+      flex: 1;
+    }
+    #exampleBriefModal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    #exampleBriefModal .modal-content {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      max-width: 600px;
+    }
+  </style>
+
+
+
+  <!-- Hero Section -->
+  <section class="bg-blue-600 text-white text-center py-20">
+    <div class="container mx-auto px-6">
+      <h1 class="text-5xl font-extrabold">Unlock Powerful Insights with AI</h1>
+      <p class="mt-4 text-lg">Leverage synthetic intelligence for precise market research and analysis.</p>
+      <a href="#form-section" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 rounded-lg text-lg font-semibold shadow-lg hover:bg-gray-200 transition">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <main class="py-12" id="form-section">
+    <div class="container mx-auto px-6">
+      <div class="max-w-2xl mx-auto bg-white shadow-md rounded-lg overflow-hidden">
+        <div class="bg-blue-600 text-white text-center py-4">
+          <h2 class="text-2xl font-semibold">Generate Insights</h2>
+        </div>
+        <div class="p-6">
+          <form action="/async_results" method="post" enctype="multipart/form-data">
+            <div class="mb-4">
+              <label for="brief" class="block text-gray-700 font-bold mb-2">Brief:</label>
+              <div class="flex items-center space-x-2">
+                <textarea id="brief" name="brief" rows="4" placeholder="Enter your research brief" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"></textarea>
+                <a href="#" id="exampleBriefLink" class="ml-2 text-blue-500 underline">Example Brief</a>
+              </div>
+            </div>
+            <div class="mb-4">
+              <label for="comparison_file" class="block text-gray-700 font-bold mb-2">Upload Comparison Report:</label>
+              <input type="file" id="comparison_file" name="comparison_file" accept=".pdf" class="w-full p-2 border border-gray-300 rounded-lg">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-blue-700 transition">Submit</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- How Does It Work Section -->
+      <div class="max-w-2xl mx-auto mt-8 bg-white shadow-md rounded-lg overflow-hidden p-6">
+        <h2 class="text-2xl font-semibold mb-4">How Does It Work?</h2>
+        <div class="space-y-4">
+          <div>
+            <h3 class="text-xl font-bold">Step 1: Submit Your Brief & Report</h3>
+            <p class="text-gray-700">Enter your research brief and upload a comparison report to kick off the process.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">Step 2: AI Processing</h3>
+            <p class="text-gray-700">Our AI analyzes your brief and file, generating personas and simulating a focus group discussion in real-time.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">Step 3: Receive Detailed Insights</h3>
+            <p class="text-gray-700">Once processing is complete, you'll receive a comprehensive report with focus group dialog, research sections, and additional insights.</p>
+          </div>
+          <div>
+            <h3 class="text-xl font-bold">Step 4: Review & Apply</h3>
+            <p class="text-gray-700">Review the generated insights and reports, and use them to inform your market research and decision-making.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- Example Brief Modal -->
+  <div id="exampleBriefModal" class="hidden fixed inset-0 z-50 bg-gray-900 bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white rounded-lg p-6 max-w-3xl mx-auto relative overflow-y-auto" style="max-height: 80vh;">
+      <h3 class="text-2xl font-bold mb-4">Example Brief: Gemini Usage in Turkey</h3>
+      <div class="text-lg space-y-4">
+        <p>
+          <strong>1. Objective:</strong> This research aims to understand the motivations and barriers influencing Gemini usage among university-educated, middle-to-high income individuals aged 18-45 in Turkey. The findings will inform product development, marketing strategies, and user onboarding efforts to increase adoption and retention of Gemini within this target demographic.
+        </p>
+        <p>
+          <strong>2. Background:</strong> Gemini, a [AI-powered tool offering various functionalities], is being introduced to the Turkish market. Globally, Gemini usage is influenced by factors such as perceived value, integration with existing ecosystems, accuracy, and platform-specific experiences. Understanding these dynamics within the specific context of the Turkish market is crucial for successful product adoption. Global research indicates key motivations include productivity enhancement, integration with Google tools, and accuracy, while barriers include competition (e.g., ChatGPT), unclear use cases, and platform-specific issues (e.g., Android Assistant integration).
+        </p>
+        <p>
+          <strong>3. What We Know (Global Insights):</strong><br>
+          <strong>Motivations:</strong> Users seek clear use cases, integration with existing Google tools, accurate responses, and prompt assistance.<br>
+          <strong>Barriers:</strong> Competition, lack of clear use cases, inaccurate responses, and platform-specific issues (Android Assistant integration, iOS comparison to search) are significant deterrents.<br>
+          <strong>Key Themes:</strong> Improved accuracy, ecosystem integration, education/onboarding, platform optimization, and competitive differentiation are crucial for success.<br>
+          <strong>Specific Examples:</strong> Global research highlights the importance of "ideas on how to use" Gemini, the negative impact of perceived Assistant downgrade on Android, and the unfavorable comparison to Google Search on iOS.
+        </p>
+        <p>
+          <strong>4. Methodology:</strong> This research will employ a synthetic approach to gather qualitative data:
+          <br><em>Qualitative Focus Groups:</em> 2-3 focus groups will be conducted with members of the target audience to explore motivations and barriers in greater depth. These discussions will delve into:
+          <br>- Specific use cases for Gemini in their daily lives.
+          <br>- Perceptions of Gemini compared to competitors.
+          <br>- Pain points and unmet needs related to AI tools.
+          <br>- Preferred learning methods for new technologies.
+          <br><em>Data Analysis:</em> Quantitative data will be analyzed using statistical methods to identify trends and correlations. Qualitative data will be analyzed using thematic analysis to identify key themes and insights.
+        </p>
+        <p>
+          <strong>5. Audience:</strong> The target audience for this research is:
+          <br>- Age: 18-45 years old
+          <br>- Education: University graduates
+          <br>- Income: Middle to high income bracket
+          <br>- Location: Turkey
+          <br>- Other Characteristics: Tech-savvy and likely to be early adopters of new technologies. Active users of digital tools and services.
+        </p>
+      </div>
+      <button id="closeModal" class="mt-6 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 absolute top-2 right-2">
+        Close
+      </button>
+    </div>
+  </div>
+
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      var exampleLink = document.getElementById("exampleBriefLink");
+      var modal = document.getElementById("exampleBriefModal");
+      var closeModal = document.getElementById("closeModal");
+
+      exampleLink.addEventListener("click", function(event) {
+        event.preventDefault();
+        modal.classList.remove("hidden");
+      });
+
+      closeModal.addEventListener("click", function() {
+        modal.classList.add("hidden");
+      });
+
+      // Close the modal if clicking outside the modal content
+      modal.addEventListener("click", function(event) {
+        if (event.target === modal) {
+          modal.classList.add("hidden");
+        }
+      });
+    });
+  </script>
+
+{% endblock %}

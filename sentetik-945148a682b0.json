@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "sentetik",
+  "private_key_id": "945148a682b03ba642836d250f46ff5bcecf09f5",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvwIBADANBgkqhkiG9w0BAQEFAASCBKkwggSlAgEAAoIBAQCopp7VTu82NzkY\n2TjKgX1OJkFuq/yfNoBYyn+8W/lluoCwFPoZzZap+pWYR/cL5z9VxWVYHWbdll50\nXo6LJUnaVqYKQ15aOJ8duXH4H6d9/Im2UCxTuj7yzKGLuHkOvDDotjPnIG2DbQEf\n+Edr/xK37o7gh20SLxEkfUa4MrimlLt5wDiOI9O7LXsvYUpwdXhqO+ndjEzGIQIV\n61sBRfqyie3KFn4nZr3l+5A6Xi7igGTfgX+1v6d46WM9HkafIpI39ZMqbiGkiVmo\n6b5/rsSKc3O1a5q+ORRZF+vLzgsykDLf3qzs+R1ncx7f2oE3yjbth1HHRu4Kg/Lb\nyo8svWWrAgMBAAECggEASsFMbz2lT9FLmEWU5EJgghb38u/+Mq5sVq8vzpSwKBTy\nvNoXf/9+lIqz64OesGKI0uKECPpDYd4osQlGwsu9ADBfOfZhqLknYnwUVgjl67TY\nb/z6oQRRqbrlsnKLCmqFfWlh+UWI9XQIRxz8v5SZPfla0JCG2sQNI7D5+2TUL1XN\n9SgLu9OLByRfTLTRu9tRBoI7K8IrhQemll4u/eMft3SZX2yn8k4xZxK+0Tz+hqBm\ncVHbKW7EEYVBN5VhGsJcIUbSoDckUW0WBixNuUi+hum2CupBIo8MyXi6ihU3y15V\nS2a+il4gpFthqIUlBKbz2r4gvmhorsBY0oIuqHXtxQKBgQC80mSYl+OiR0QN+t1x\n4IOmscjXZ65JrR0kMjSSLdwiVIjdgXaxG+mTI4yyMwhrzVS2R7GRW4qdCasEmmNg\nxjW6kUayVEewKoKle/pA/kxX2W9GIvia6RuFqZu3+bUTQlPFjGJ2Tcq3psbs8CsG\nOKPBzNjVcxq2gIwg7/pZ4uJkfwKBgQDkpxWuP4iPBLGpTBQm4dkTG1HP3ldig4bD\nSebhUvcXe2DD02rJLA8R8Oeb4uERg2YJvl5vOXb+a6dxpnB2BhXaP+X/R3SBJjBb\nUz7Cj0p7iOmpVZZQr0/6zU+jJZXWxGofgT+Xpr2tFx58HMEquZoVG96+RvPbA75x\n/lQT3Zw41QKBgQC8kXyG64EYagVr1LFb7XRsf7XscI2c5HZq1Hyt04C5BCUe2RDY\ntOBh4im7OL3bMta7pwOM/5eBVstksG44khnMNRMeOo7RPtL0QsjcKVnCjdHTgE84\nHT4wEP8DDywnjKCuc5FNRkkBeVvF+d9tuhjIDTQqjmYKBnxq1F33cF7ZLwKBgQDh\n6CrFg8P5+ZtGNwJaAB2mgQFtrLENhgFphOR1jrDOJHnQQFtq8vrYsPlDzP6tfPMd\ngVZv8YidieNfqB/Im+6POT6V3xU+XGq+cBq7wzLFptmlEgh3Ix6UHrEl8YZ/MIPh\nKKOZw4X3M7ZMzWQUQFf5rxV9TUC1DJfmrG6JShSFGQKBgQCxSghFiSFHCP9sD1R7\nj9H2wnX29a/6o0RYBp0SpoBsxuNZUuNpw/AepnPzGU+awyPEriqS7+MOqm1NxYdE\nquEuAgoasDwly9ocZvrD+vgqyAd/PvaCuFNpVUsWJQwf1wcals2inN95VMeu3F2I\nVFVOOoTzSPuEbDeXH2xzNt7qcA==\n-----END PRIVATE KEY-----\n",
+  "client_email": "sentetik@appspot.gserviceaccount.com",
+  "client_id": "117603113122151044615",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/sentetik%40appspot.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

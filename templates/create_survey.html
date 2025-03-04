@@ -1,0 +1,182 @@
+{% extends "layout.html" %}
+
+{% block title %}Create Survey{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8 max-w-4xl">
+  <div class="bg-white rounded-lg shadow-lg p-6">
+    <h1 class="text-3xl font-bold text-gray-900 mb-6">Create Survey</h1>
+    
+    <!-- Brief Generator (similar to brief_step.html) -->
+    <div class="mb-6">
+      <button id="showBriefGenerator" 
+              class="text-blue-600 underline hover:text-blue-800">
+        Help me generate a brief
+      </button>
+      
+      <!-- Brief Generator Modal -->
+      <div id="briefGeneratorModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+        <div class="bg-white rounded-lg p-6 max-w-lg w-full mx-4">
+          <h2 class="text-2xl font-bold mb-4">Brief Generator</h2>
+          <form id="briefGeneratorForm" class="space-y-4">
+            <div>
+              <label class="block text-sm font-medium text-gray-700">Briefly describe your company and research needs:</label>
+              <textarea id="shortPrompt" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" rows="3"></textarea>
+            </div>
+            <div class="flex justify-end gap-4">
+              <button type="button" id="closeBriefGenerator" class="px-4 py-2 text-gray-600 hover:text-gray-800">Cancel</button>
+              <button type="submit" class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">Generate Brief</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Main Form -->
+    <form id="surveyForm" action="{{ url_for('create_survey') }}" method="POST">
+      <div class="space-y-6">
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Research Brief:</label>
+          <textarea id="brief" name="brief" rows="6" 
+                    class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                    required></textarea>
+        </div>
+        
+        <div>
+          <label class="block text-sm font-medium text-gray-700">Number of Personas:</label>
+          <div class="mt-1 flex rounded-md shadow-sm">
+            <input type="number" 
+                   name="total_personas" 
+                   min="5" 
+                   max="1000" 
+                   value="20"
+                   class="block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                   required>
+          </div>
+          <p class="mt-1 text-sm text-gray-500">
+            Choose between 5 and 1000 personas. More personas will take longer to process but provide more accurate results.
+          </p>
+        </div>
+        
+        <div id="questions-container" class="space-y-4">
+          <label class="block text-sm font-medium text-gray-700">Survey Questions:</label>
+          <div class="question-entry flex gap-2">
+            <input type="text" name="questions[]" 
+                   class="flex-1 rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"
+                   placeholder="Enter yes/no question" required>
+            <button type="button" class="remove-question text-red-600 px-2" style="display: none;">&times;</button>
+          </div>
+        </div>
+        
+        <div class="mt-4 p-4 bg-blue-50 rounded-md">
+          <div class="flex items-start">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-blue-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd" />
+              </svg>
+            </div>
+            <div class="ml-3">
+              <h3 class="text-sm font-medium text-blue-800">Processing Time</h3>
+              <div class="mt-2 text-sm text-blue-700">
+                <p>Estimated processing time:</p>
+                <ul class="list-disc pl-5 mt-1">
+                  <li>20 personas: ~2 minutes</li>
+                  <li>50 personas: ~5 minutes</li>
+                  <li>100 personas: ~10 minutes</li>
+                  <li>500+ personas: 30+ minutes</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <button type="button" id="addQuestion" 
+                class="text-blue-600 underline hover:text-blue-800">
+          + Add another question
+        </button>
+        
+        <div class="flex justify-end">
+          <button type="submit" id="createSurveyBtn"
+                  class="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition">
+            Create Survey →
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script>
+// Brief Generator Modal
+document.getElementById('showBriefGenerator').addEventListener('click', () => {
+  document.getElementById('briefGeneratorModal').classList.remove('hidden');
+});
+
+document.getElementById('closeBriefGenerator').addEventListener('click', () => {
+  document.getElementById('briefGeneratorModal').classList.add('hidden');
+});
+
+document.getElementById('briefGeneratorForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const submitBtn = e.target.querySelector('button[type="submit"]');
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `
+    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+    Generating Brief...
+  `;
+  
+  try {
+    const response = await fetch('/generate-brief', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ prompt: document.getElementById('shortPrompt').value }),
+    });
+    
+    const data = await response.json();
+    document.getElementById('brief').value = data.brief;
+    document.getElementById('briefGeneratorModal').classList.add('hidden');
+  } catch (error) {
+    console.error('Error:', error);
+    alert('Failed to generate brief. Please try again.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Generate Brief';
+  }
+});
+
+// Question Management
+document.getElementById('addQuestion').addEventListener('click', () => {
+  const container = document.getElementById('questions-container');
+  const newQuestion = document.querySelector('.question-entry').cloneNode(true);
+  newQuestion.querySelector('input').value = '';
+  newQuestion.querySelector('.remove-question').style.display = 'block';
+  container.appendChild(newQuestion);
+});
+
+document.getElementById('questions-container').addEventListener('click', (e) => {
+  if (e.target.classList.contains('remove-question')) {
+    if (document.querySelectorAll('.question-entry').length > 1) {
+      e.target.closest('.question-entry').remove();
+    }
+  }
+});
+
+// Form Submission
+document.getElementById('surveyForm').addEventListener('submit', function(e) {
+  const submitBtn = document.getElementById('createSurveyBtn');
+  submitBtn.disabled = true;
+  submitBtn.innerHTML = `
+    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white inline" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+    Creating Survey...
+  `;
+});
+</script>
+{% endblock %} 

@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+
+{% block title %}All Submissions{% endblock %}
+
+{% block content %}
+<div class="container mx-auto px-4 py-8">
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="text-2xl font-bold text-gray-900">All Research Reports</h1>
+    <a href="{{ url_for('start') }}" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition flex items-center gap-2">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4" />
+      </svg>
+      New Research
+    </a>
+  </div>
+
+  <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+    {% for submission in submissions %}
+    <a href="{{ url_for('submission_view', submission_id=submission.id) }}" 
+       class="block bg-white rounded-lg shadow-md hover:shadow-lg transition p-6">
+      <div class="flex justify-between items-start mb-4">
+        <div class="flex items-center gap-2 text-sm text-gray-600">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          {{ submission.created_at.strftime('%Y-%m-%d %H:%M') }}
+        </div>
+       
+      </div>
+
+    
+    </a>
+    {% endfor %}
+  </div>
+
+  {% if not submissions %}
+  <div class="text-center py-12">
+    <div class="text-gray-500 mb-4">No research reports found</div>
+    <a href="{{ url_for('start') }}" class="text-blue-600 hover:text-blue-800">Create your first research report</a>
+  </div>
+  {% endif %}
+</div>
+{% endblock %}

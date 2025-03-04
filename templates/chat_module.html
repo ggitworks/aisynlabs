@@ -1,0 +1,161 @@
+<div class="chat-module bg-white rounded-lg shadow-lg p-4">
+  <!-- Persona Selector -->
+  <div class="mb-4">
+    <label class="block text-sm font-medium text-gray-700 mb-2">Select Persona to Chat With:</label>
+    <select id="personaSelector" class="w-full p-2 border rounded-md">
+      {% for persona in submission_data.personas %}
+        <option value="{{ loop.index0 }}">{{ persona.name }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <!-- Chat Messages Container -->
+  <div id="chatMessages" class="h-96 overflow-y-auto mb-4 p-4 border rounded-lg space-y-4">
+    <!-- Messages will be inserted here -->
+  </div>
+
+  <!-- Chat Input -->
+  <form id="chatForm" class="flex gap-2">
+    <input type="text" 
+           id="messageInput" 
+           class="flex-1 p-2 border rounded-md"
+           placeholder="Type your message..."
+           required>
+    <button type="submit" 
+            id="sendMessage" 
+            class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition">
+      Send
+    </button>
+  </form>
+</div>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const chatMessages = document.getElementById('chatMessages');
+    const chatForm = document.getElementById('chatForm');
+    const messageInput = document.getElementById('messageInput');
+    const personaSelector = document.getElementById('personaSelector');
+    const sendButton = document.getElementById('sendMessage');
+
+    let currentPersona = null;
+    let currentSessionId = null;
+
+    // Start a new chat session
+    async function startNewSession(personaIndex) {
+        const selectedPersona = {{ submission_data.personas|tojson|safe }}[personaIndex];
+        const rawDialog = {{ submission_data.dialog|tojson|safe }};
+        
+        try {
+            const response = await fetch('/start-chat-session', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    persona: selectedPersona,
+                    dialog: rawDialog
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            currentSessionId = data.session_id;
+            currentPersona = selectedPersona;
+            
+            // Clear chat and add welcome message
+            chatMessages.innerHTML = '';
+            addMessage({
+                role: 'assistant',
+                content: data.welcome_message
+            });
+        } catch (error) {
+            console.error('Error starting chat session:', error);
+            addMessage({
+                role: 'assistant',
+                content: 'Sorry, I encountered an error starting the chat. Please try again.'
+            });
+        }
+    }
+
+    // Handle persona selection change
+    personaSelector.addEventListener('change', function(e) {
+        startNewSession(e.target.value);
+    });
+
+    // Add a message to the chat
+    function addMessage(message) {
+        const messageDiv = document.createElement('div');
+        messageDiv.className = `flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`;
+        
+        const contentDiv = document.createElement('div');
+        contentDiv.className = `max-w-[70%] rounded-lg p-3 ${
+            message.role === 'user' 
+                ? 'bg-blue-600 text-white' 
+                : 'bg-gray-100 text-gray-800'
+        }`;
+        contentDiv.textContent = message.content;
+        
+        messageDiv.appendChild(contentDiv);
+        chatMessages.appendChild(messageDiv);
+        chatMessages.scrollTop = chatMessages.scrollHeight;
+    }
+
+    // Handle form submission
+    chatForm.addEventListener('submit', async function(e) {
+        e.preventDefault();
+        const message = messageInput.value.trim();
+        if (!message || !currentSessionId) return;
+
+        // Disable input while processing
+        messageInput.disabled = true;
+        sendButton.disabled = true;
+
+        // Add user message to chat
+        addMessage({
+            role: 'user',
+            content: message
+        });
+
+        try {
+            const response = await fetch(`/chat-message/${currentSessionId}`, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({
+                    message: message
+                }),
+            });
+
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+
+            const data = await response.json();
+            
+            // Add assistant's response to chat
+            addMessage({
+                role: 'assistant',
+                content: data.response
+            });
+        } catch (error) {
+            console.error('Error:', error);
+            addMessage({
+                role: 'assistant',
+                content: 'Sorry, I encountered an error. Please try again.'
+            });
+        } finally {
+            messageInput.value = '';
+            messageInput.disabled = false;
+            sendButton.disabled = false;
+            messageInput.focus();
+        }
+    });
+    
+    // Initialize with first persona
+    startNewSession(0);
+});
+</script> 
